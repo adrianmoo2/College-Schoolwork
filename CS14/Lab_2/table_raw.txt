@@ -1,0 +1,87 @@
+a: 2, 7, 26, 29, 54, 122
+achieve: 130
+after: 44
+all: 70, 127
+alphabet: 25
+alphabetical: 59
+alternating: 15
+an: 14
+and: 28, 31, 100
+appears: 77
+as: 13
+assume: 81
+based: 113
+becomes: 91, 98
+below: 103
+blank: 37
+c: 3
+case: 80, 120
+consecutive: 21
+contents: 12
+digits: 40
+distinct: 65
+e: 20, 34
+else: 36
+entire: 49
+etc: 43
+everything: 35
+file: 9, 50, 74, 90
+find: 87, 97
+first: 84
+frequencies: 118
+frequency: 56, 135
+have: 46
+i: 19, 33
+in: 58, 72, 78, 88, 119
+interprets: 10
+it: 76
+its: 11
+letters: 22
+like: 42
+list: 126
+lists: 68
+location: 92, 99
+locations: 71
+must: 52
+observed: 116
+of: 17, 23, 121, 132
+on: 102, 114
+one: 62, 131
+order: 60
+output: 53
+per: 64
+program: 4
+punctuation: 39
+read: 47
+reads: 6
+row: 63
+s: 137
+second: 94
+separators: 32
+series: 16
+should: 125
+so: 101
+space: 38
+state: 108
+symbols: 41
+table: 57, 105
+text: 8
+that: 5, 67, 73, 82, 129
+the: 24, 48, 69, 83, 89, 93, 104, 109, 133
+their: 115
+this: 79
+tie: 123
+top: 110
+two: 111
+value: 136
+where: 75
+will: 107
+winning: 134
+with: 61
+word: 55, 66, 85, 95, 117
+words: 18, 112, 128
+write: 1
+you: 45, 51, 86, 96, 106, 124
+z: 27, 30
+This single most-frequent word appears 9 times: the
+These second most-frequent word(s) appear 6 times: a, you

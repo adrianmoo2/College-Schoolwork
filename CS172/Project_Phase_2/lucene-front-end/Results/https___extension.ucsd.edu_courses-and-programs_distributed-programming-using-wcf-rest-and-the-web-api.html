@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en">
+ <head id="head">
+  <title>
+	UC San Diego Extension | Continuing Education | UCSD Extension
+</title>
+  <meta name="description" content="The University of California San Diego Extension is a premier online research university for community leaders and professionals. Join today."> 
+  <meta charset="UTF-8"> 
+  <!-- Mobile-friendly viewport --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Style sheet link --> 
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,100,300,700,500" rel="stylesheet" type="text/css"> 
+  <link href="/dist/css/main.css" rel="stylesheet" media="all"> 
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+  <!-- #main-menu config - instance specific stuff not covered in the theme --> 
+  <!-- Put this in an external stylesheet if you want the media query to work in IE8 (e.g. where the rest of your page styles are) --> 
+  <style type="text/css">
+        @media (min-width: 1300px) {
+            #main-nav {
+                line-height: 0;
+                text-align: center;
+            }
+
+            #main-menu {
+                display: inline-block;
+            }
+        }
+    </style> 
+  <link rel="canonical" href="https://extension.ucsd.edu/courses-and-programs/distributed-programming-using-wcf-rest-and-the-web-api"> 
+  <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"> 
+  <link href="/favicon.ico" type="image/x-icon" rel="icon"> 
+  <style>.async-hide { opacity: 0 !important} </style> 
+  <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-NVJX5B9':true});</script> 
+  <script type="text/javascript">
+	//<![CDATA[
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+{ (i[r].q=i[r].q||[]).push(arguments)}
+,i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15687083-19', 'auto');
+ga('require', 'GTM-NVJX5B9');
+ga('require', 'linker');
+ga('linker:autoLink', ['ucsd.edu', 'ucsdextension.blackboard.com', 'firstdataglobalgateway.com', 'sallyridescience.ucsd.edu', 'uctv.tv', 'ucsd.tv']);
+ga('require', 'linkid');
+ga('send', 'pageview');
+//]]>
+</script>
+ </head> 
+ <body class="LTR Safari Chrome Safari44 Chrome44 ENUS ContentBody"> 
+  <form method="post" action="/courses-and-programs/distributed-programming-using-wcf-rest-and-the-web-api" id="form"> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="manScript_HiddenField" id="manScript_HiddenField" value=""> 
+    <input type="hidden" name="__CMSCsrfToken" id="__CMSCsrfToken" value="0rO6DQ0aXcjtbzY82LFFul8LfEyc6z2XBqlYLfpUfPnKr4ZVoF1sGeC+WeGNvjMFp23FBTYPCQYrjTbEALDYyhnWDdpUjmpocwZzp5hsd14="> 
+    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""> 
+    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""> 
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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"> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form'];
+if (!theForm) {
+    theForm = document.form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+   <script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZCkauUTdxuiJ0y3166OP8b3wJBra4jF7i4IggA6ixqDAEA7CzbkG8itz1Ci_a9SWHQ2&amp;t=636475831203255666" type="text/javascript"></script> 
+   <input type="hidden" name="lng" id="lng" value="en-US"> 
+   <script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fWebServiceCall.js" type="text/javascript"></script> 
+   <script type="text/javascript">
+	//<![CDATA[
+
+function PM_Postback(param) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); } if(window.CMSContentManager) { CMSContentManager.allowSubmit = true; }; __doPostBack('m$am',param); }
+function PM_Callback(param, callback, ctx) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); }if (window.CMSContentManager) { CMSContentManager.storeContentChangedStatus(); };WebForm_DoCallback('m$am',param,callback,ctx,null,true); }
+//]]>
+</script> 
+   <script src="/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LQMw3SgLcYoFnuw8K40PUqA1fj17t8Hs4CQrLqbDCedAsYUF0Cv5H0mMzm08RV8kvYlF0f3Q4x-UpVvWAZ0TUyBb6xGtfcedv3wWQBG8Y5Hh0&amp;t=7c776dc1" type="text/javascript"></script> 
+   <script src="/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScNpeUgnOv1A5t_Knmo4FYeQUSrW1rMVWwrmitivDKnJd8bjzEq1aDhi8-cDcL2AoSvHJraht2vBetcv7bvyvuhxPVa4514igS2iGSpEaLW0-0&amp;t=7c776dc1" type="text/javascript"></script> 
+   <script type="text/javascript">
+	//<![CDATA[
+
+var CMS = CMS || {};
+CMS.Application = {
+  "isRTL": "false",
+  "isDebuggingEnabled": false,
+  "applicationUrl": "/",
+  "imagesUrl": "/CMSPages/GetResource.ashx?image=%5bImages.zip%5d%2f",
+  "isDialog": false
+};
+
+//]]>
+</script> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A5343185"> 
+    <input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0"> 
+    <input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0"> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('manScript', 'form', ['tctxM',''], [], [], 90, '');
+//]]>
+</script> 
+   <div id="ctxM"> 
+   </div> 
+   <div class="svg-legend" aria-hidden="true"> 
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" focusable="false"> 
+     <symbol id="icon-cart" viewbox="0 0 24 24">
+      <title>shopping_cart</title>
+      <path class="path1" d="M17.016 18c1.078 0 1.969 0.938 1.969 2.016s-0.891 1.969-1.969 1.969-2.016-0.891-2.016-1.969 0.938-2.016 2.016-2.016zM0.984 2.016h3.281l0.938 1.969h14.813c0.563 0 0.984 0.469 0.984 1.031 0 0.188-0.047 0.328-0.141 0.469l-3.563 6.469c-0.328 0.609-0.984 1.031-1.734 1.031h-7.453l-0.891 1.641-0.047 0.141c0 0.141 0.094 0.234 0.234 0.234h11.578v2.016h-12c-1.078 0-1.969-0.938-1.969-2.016 0-0.328 0.094-0.656 0.234-0.938l1.359-2.484-3.609-7.594h-2.016v-1.969zM6.984 18c1.078 0 2.016 0.938 2.016 2.016s-0.938 1.969-2.016 1.969-1.969-0.891-1.969-1.969 0.891-2.016 1.969-2.016z"></path>
+     </symbol> 
+     <symbol id="icon-search" viewbox="0 0 32 32">
+      <title>search</title>
+      <path class="path1" d="M19.427 20.427c-1.39 0.99-3.090 1.573-4.927 1.573-4.694 0-8.5-3.806-8.5-8.5s3.806-8.5 8.5-8.5c4.694 0 8.5 3.806 8.5 8.5 0 2.347-0.951 4.472-2.49 6.010l5.997 5.997c0.275 0.275 0.268 0.716-0.008 0.992-0.278 0.278-0.72 0.28-0.992 0.008l-6.081-6.081zM14.5 21c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5v0z"></path>
+     </symbol> 
+     <symbol id="icon-twitter" viewbox="0 0 20 20">
+      <title>twitter</title>
+      <path class="path1" d="M17.316 6.246c0.008 0.162 0.011 0.326 0.011 0.488 0 4.99-3.797 10.742-10.74 10.742-2.133 0-4.116-0.625-5.787-1.697 0.296 0.035 0.596 0.053 0.9 0.053 1.77 0 3.397-0.604 4.688-1.615-1.651-0.031-3.046-1.121-3.526-2.621 0.23 0.043 0.467 0.066 0.71 0.066 0.345 0 0.679-0.045 0.995-0.131-1.727-0.348-3.028-1.873-3.028-3.703 0-0.016 0-0.031 0-0.047 0.509 0.283 1.092 0.453 1.71 0.473-1.013-0.678-1.68-1.832-1.68-3.143 0-0.691 0.186-1.34 0.512-1.898 1.861 2.285 4.644 3.787 7.781 3.945-0.064-0.277-0.097-0.564-0.097-0.861 0-2.084 1.689-3.773 3.774-3.773 1.086 0 2.067 0.457 2.756 1.191 0.859-0.17 1.667-0.484 2.397-0.916-0.282 0.881-0.881 1.621-1.66 2.088 0.764-0.092 1.49-0.293 2.168-0.594-0.506 0.758-1.146 1.422-1.884 1.953z"></path>
+     </symbol> 
+     <symbol id="icon-instagram" viewbox="0 0 20 20">
+      <title>instagram</title>
+      <path class="path1" d="M17 1h-14c-1.1 0-2 0.9-2 2v14c0 1.101 0.9 2 2 2h14c1.1 0 2-0.899 2-2v-14c0-1.1-0.9-2-2-2zM9.984 15.523c3.059 0 5.538-2.481 5.538-5.539 0-0.338-0.043-0.664-0.103-0.984h1.581v7.216c0 0.382-0.31 0.69-0.693 0.69h-12.614c-0.383 0-0.693-0.308-0.693-0.69v-7.216h1.549c-0.061 0.32-0.104 0.646-0.104 0.984 0 3.059 2.481 5.539 5.539 5.539zM6.523 9.984c0-1.912 1.55-3.461 3.462-3.461s3.462 1.549 3.462 3.461-1.551 3.462-3.462 3.462c-1.913 0-3.462-1.55-3.462-3.462zM16.307 6h-1.615c-0.382 0-0.692-0.312-0.692-0.692v-1.617c0-0.382 0.31-0.691 0.691-0.691h1.615c0.384 0 0.694 0.309 0.694 0.691v1.616c0 0.381-0.31 0.693-0.693 0.693z"></path>
+     </symbol> 
+     <symbol id="icon-facebook" viewbox="0 0 16 16">
+      <title>facebook</title>
+      <path class="path1" d="M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z"></path>
+     </symbol> 
+     <symbol id="icon-google" viewbox="0 0 20 20">
+      <title>google</title>
+      <path class="path1" d="M1.989 5.589c0 1.494 0.499 2.572 1.482 3.205 0.806 0.52 1.74 0.598 2.226 0.598 0.118 0 0.213-0.006 0.279-0.010 0 0-0.154 1.004 0.59 1.996h-0.034c-1.289 0-5.493 0.269-5.493 3.727 0 3.516 3.861 3.695 4.636 3.695 0.061 0 0.097-0.002 0.097-0.002 0.008 0 0.063 0.002 0.158 0.002 0.497 0 1.782-0.062 2.975-0.643 1.548-0.75 2.333-2.059 2.333-3.885 0-1.764-1.196-2.814-2.069-3.582-0.533-0.469-0.994-0.873-0.994-1.266 0-0.4 0.337-0.701 0.762-1.082 0.689-0.615 1.339-1.492 1.339-3.15 0-1.457-0.189-2.436-1.354-3.057 0.121-0.062 0.551-0.107 0.763-0.137 0.631-0.086 1.554-0.184 1.554-0.699v-0.099h-4.599c-0.046 0.002-4.651 0.172-4.651 4.389zM9.413 14.602c0.088 1.406-1.115 2.443-2.922 2.574-1.835 0.135-3.345-0.691-3.433-2.096-0.043-0.676 0.254-1.336 0.835-1.863 0.589-0.533 1.398-0.863 2.278-0.928 0.104-0.006 0.207-0.012 0.31-0.012 1.699 0.001 2.849 0.999 2.932 2.325zM8.212 4.626c0.451 1.588-0.23 3.246-1.316 3.553-0.125 0.035-0.253 0.052-0.384 0.052-0.994 0-1.979-1.006-2.345-2.393-0.204-0.776-0.187-1.458 0.047-2.112 0.229-0.645 0.643-1.078 1.163-1.225 0.125-0.035 0.254-0.053 0.385-0.053 1.2 0 1.972 0.498 2.45 2.178zM16 8v-3h-2v3h-3v2h3v3h2v-3h3v-2h-3z"></path>
+     </symbol> 
+     <symbol id="icon-linkedin" viewbox="0 0 20 20">
+      <title>linkedin</title>
+      <path class="path1" d="M5 3c0 1.062-0.71 1.976-2.001 1.976-1.215 0-1.999-0.862-1.999-1.924 0-1.090 0.76-2.052 2-2.052s1.976 0.91 2 2zM1 19v-13h4v13h-4z"></path>
+      <path class="path2" d="M7 10.444c0-1.545-0.051-2.836-0.102-3.951h3.594l0.178 1.723h0.076c0.506-0.811 1.746-2 3.822-2 2.532 0 4.432 1.695 4.432 5.342v7.442h-4v-6.861c0-1.594-0.607-2.81-2-2.81-1.062 0-1.594 0.86-1.873 1.569-0.102 0.254-0.127 0.608-0.127 0.963v7.139h-4v-8.556z"></path>
+     </symbol> 
+     <symbol id="icon-youtube" viewbox="0 0 27 32">
+      <title>youtube</title>
+      <path class="path1" d="M17.339 22.214v3.768q0 1.196-0.696 1.196-0.411 0-0.804-0.393v-5.375q0.393-0.393 0.804-0.393 0.696 0 0.696 1.196zM23.375 22.232v0.821h-1.607v-0.821q0-1.214 0.804-1.214t0.804 1.214zM6.125 18.339h1.911v-1.679h-5.571v1.679h1.875v10.161h1.786v-10.161zM11.268 28.5h1.589v-8.821h-1.589v6.75q-0.536 0.75-1.018 0.75-0.321 0-0.375-0.375-0.018-0.054-0.018-0.625v-6.5h-1.589v6.982q0 0.875 0.143 1.304 0.214 0.661 1.036 0.661 0.857 0 1.821-1.089v0.964zM18.929 25.857v-3.518q0-1.304-0.161-1.768-0.304-1-1.268-1-0.893 0-1.661 0.964v-3.875h-1.589v11.839h1.589v-0.857q0.804 0.982 1.661 0.982 0.964 0 1.268-0.982 0.161-0.482 0.161-1.786zM24.964 25.679v-0.232h-1.625q0 0.911-0.036 1.089-0.125 0.643-0.714 0.643-0.821 0-0.821-1.232v-1.554h3.196v-1.839q0-1.411-0.482-2.071-0.696-0.911-1.893-0.911-1.214 0-1.911 0.911-0.5 0.661-0.5 2.071v3.089q0 1.411 0.518 2.071 0.696 0.911 1.929 0.911 1.286 0 1.929-0.946 0.321-0.482 0.375-0.964 0.036-0.161 0.036-1.036zM14.107 9.375v-3.75q0-1.232-0.768-1.232t-0.768 1.232v3.75q0 1.25 0.768 1.25t0.768-1.25zM26.946 22.786q0 4.179-0.464 6.25-0.25 1.054-1.036 1.768t-1.821 0.821q-3.286 0.375-9.911 0.375t-9.911-0.375q-1.036-0.107-1.83-0.821t-1.027-1.768q-0.464-2-0.464-6.25 0-4.179 0.464-6.25 0.25-1.054 1.036-1.768t1.839-0.839q3.268-0.357 9.893-0.357t9.911 0.357q1.036 0.125 1.83 0.839t1.027 1.768q0.464 2 0.464 6.25zM9.125 0h1.821l-2.161 7.125v4.839h-1.786v-4.839q-0.25-1.321-1.089-3.786-0.661-1.839-1.161-3.339h1.893l1.268 4.696zM15.732 5.946v3.125q0 1.446-0.5 2.107-0.661 0.911-1.893 0.911-1.196 0-1.875-0.911-0.5-0.679-0.5-2.107v-3.125q0-1.429 0.5-2.089 0.679-0.911 1.875-0.911 1.232 0 1.893 0.911 0.5 0.661 0.5 2.089zM21.714 3.054v8.911h-1.625v-0.982q-0.946 1.107-1.839 1.107-0.821 0-1.054-0.661-0.143-0.429-0.143-1.339v-7.036h1.625v6.554q0 0.589 0.018 0.625 0.054 0.393 0.375 0.393 0.482 0 1.018-0.768v-6.804h1.625z"></path>
+     </symbol> 
+     <symbol id="icon-mail" viewbox="0 0 20 20">
+      <title>mail</title>
+      <path class="path1" d="M1.574 5.286c0.488 0.262 7.248 3.894 7.5 4.029s0.578 0.199 0.906 0.199c0.328 0 0.654-0.064 0.906-0.199s7.012-3.767 7.5-4.029c0.489-0.263 0.951-1.286 0.054-1.286h-16.919c-0.897 0-0.435 1.023 0.053 1.286zM18.613 7.489c-0.555 0.289-7.387 3.849-7.727 4.027s-0.578 0.199-0.906 0.199-0.566-0.021-0.906-0.199-7.133-3.739-7.688-4.028c-0.39-0.204-0.386 0.035-0.386 0.219s0 7.293 0 7.293c0 0.42 0.566 1 1 1h16c0.434 0 1-0.58 1-1 0 0 0-7.108 0-7.292s0.004-0.423-0.387-0.219z"></path>
+     </symbol> 
+     <symbol id="icon-thumbs-up" viewbox="0 0 29 32">
+      <title>thumbs-up</title>
+      <path class="path1" d="M4.571 24q0-0.464-0.339-0.804t-0.804-0.339q-0.482 0-0.813 0.339t-0.33 0.804q0 0.482 0.33 0.813t0.813 0.33q0.464 0 0.804-0.33t0.339-0.813zM7.429 14.857v11.429q0 0.464-0.339 0.804t-0.804 0.339h-5.143q-0.464 0-0.804-0.339t-0.339-0.804v-11.429q0-0.464 0.339-0.804t0.804-0.339h5.143q0.464 0 0.804 0.339t0.339 0.804zM28.571 14.857q0 1.536-0.982 2.661 0.268 0.786 0.268 1.357 0.054 1.357-0.768 2.446 0.304 1 0 2.089-0.268 1.018-0.964 1.679 0.161 2-0.875 3.232-1.143 1.357-3.518 1.393h-2.304q-1.179 0-2.571-0.277t-2.17-0.518-2.152-0.705q-2.196-0.768-2.821-0.786-0.464-0.018-0.804-0.348t-0.339-0.795v-11.446q0-0.446 0.321-0.777t0.768-0.366q0.429-0.036 1.357-1.054t1.804-2.161q1.214-1.554 1.804-2.143 0.321-0.321 0.554-0.857t0.313-0.866 0.241-1.080q0.125-0.696 0.223-1.089t0.348-0.929 0.607-0.893q0.339-0.339 0.804-0.339 0.821 0 1.473 0.188t1.071 0.464 0.714 0.723 0.429 0.804 0.214 0.893 0.089 0.804 0.009 0.696q0 0.679-0.17 1.357t-0.339 1.071-0.491 1q-0.054 0.107-0.179 0.321t-0.196 0.393-0.143 0.429h4.946q1.393 0 2.411 1.018t1.018 2.411z"></path>
+     </symbol> 
+     <symbol id="icon-phone" viewbox="0 0 25 32">
+      <title>phone</title>
+      <path class="path1" d="M25.143 22.143q0 0.482-0.179 1.259t-0.375 1.223q-0.375 0.893-2.179 1.893-1.679 0.911-3.321 0.911-0.482 0-0.938-0.063t-1.027-0.223-0.848-0.259-0.991-0.366-0.875-0.321q-1.75-0.625-3.125-1.482-2.286-1.411-4.723-3.848t-3.848-4.723q-0.857-1.375-1.482-3.125-0.054-0.161-0.321-0.875t-0.366-0.991-0.259-0.848-0.223-1.027-0.063-0.938q0-1.643 0.911-3.321 1-1.804 1.893-2.179 0.446-0.196 1.223-0.375t1.259-0.179q0.25 0 0.375 0.054 0.321 0.107 0.946 1.357 0.196 0.339 0.536 0.964t0.625 1.134 0.554 0.955q0.054 0.071 0.313 0.446t0.384 0.634 0.125 0.509q0 0.357-0.509 0.893t-1.107 0.982-1.107 0.946-0.509 0.821q0 0.161 0.089 0.402t0.152 0.366 0.25 0.429 0.205 0.339q1.357 2.446 3.107 4.196t4.196 3.107q0.036 0.018 0.339 0.205t0.429 0.25 0.366 0.152 0.402 0.089q0.321 0 0.821-0.509t0.946-1.107 0.982-1.107 0.893-0.509q0.25 0 0.509 0.125t0.634 0.384 0.446 0.313q0.446 0.268 0.955 0.554t1.134 0.625 0.964 0.536q1.25 0.625 1.357 0.946 0.054 0.125 0.054 0.375z"></path>
+     </symbol> 
+     <symbol id="icon-chat" viewbox="0 0 32 32">
+      <title>Chat Bubble</title>
+      <path class="path1" d="M16 2c8.837 0 16 5.82 16 13s-7.163 13-16 13c-0.849 0-1.682-0.054-2.495-0.158-3.437 3.437-7.539 4.053-11.505 4.144v-0.841c2.142-1.049 4-2.961 4-5.145 0-0.305-0.024-0.604-0.068-0.897-3.619-2.383-5.932-6.024-5.932-10.103 0-7.18 7.163-13 16-13z"></path>
+     </symbol> 
+     <symbol id="icon-envelope" viewbox="0 0 32 32">
+      <title>envelope icon</title>
+      <path class="path1" d="M16.015 18.861l-4.072-3.343-8.862 10.463h25.876l-8.863-10.567-4.079 3.447zM29.926 6.019h-27.815l13.908 11.698 13.907-11.698zM20.705 14.887l9.291 11.084v-18.952l-9.291 7.868zM2.004 7.019v18.952l9.291-11.084-9.291-7.868z"></path>
+     </symbol> 
+     <symbol id="icon-envelope" viewbox="0 0 32 32">
+      <title>envelope icon</title>
+      <path class="path1" d="M16.015 18.861l-4.072-3.343-8.862 10.463h25.876l-8.863-10.567-4.079 3.447zM29.926 6.019h-27.815l13.908 11.698 13.907-11.698zM20.705 14.887l9.291 11.084v-18.952l-9.291 7.868zM2.004 7.019v18.952l9.291-11.084-9.291-7.868z"></path>
+     </symbol> 
+     <symbol id="icon-location" viewbox="0 0 20 32">
+      <title>Location Pin Icon</title>
+      <path class="path1" d="M17.070 2.93c-3.906-3.906-10.234-3.906-14.141 0-3.906 3.904-3.906 10.238 0 14.14 0.001 0 7.071 6.93 7.071 14.93 0-8 7.070-14.93 7.070-14.93 3.907-3.902 3.907-10.236 0-14.14zM10 14c-2.211 0-4-1.789-4-4s1.789-4 4-4 4 1.789 4 4-1.789 4-4 4z"></path>
+     </symbol> 
+     <symbol id="icon-download" viewbox="0 0 16 16">
+      <title>Download Icon</title>
+      <path class="path1" d="M15 7c-0.553 0-1 0.448-1 1v6h-12v-6c0-0.552-0.447-1-1-1s-1 0.448-1 1v7c0 0.552 0.447 1 1 1h14c0.553 0 1-0.448 1-1v-7c0-0.552-0.447-1-1-1zM9 7v-6.122c0-0.485-0.447-0.878-1-0.878s-1 0.393-1 0.878v6.122h-3l4 4 4-4h-3z"></path>
+     </symbol> 
+     <symbol id="icon-calendar" viewbox="0 0 16 16">
+      <title>calendar</title>
+      <path class="path1" d="M5 6h2v2h-2zM8 6h2v2h-2zM11 6h2v2h-2zM2 12h2v2h-2zM5 12h2v2h-2zM8 12h2v2h-2zM5 9h2v2h-2zM8 9h2v2h-2zM11 9h2v2h-2zM2 9h2v2h-2zM13 0v1h-2v-1h-7v1h-2v-1h-2v16h15v-16h-2zM14 15h-13v-11h13v11z"></path>
+     </symbol> 
+     <symbol id="icon-mobile" viewbox="0 0 32 32">
+      <title>mobile</title>
+      <path class="path1" d="M23 0h-14c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 1.5h8v1h-8v-1zM16 30c-1.105 0-2-0.895-2-2s0.895-2 2-2 2 0.895 2 2-0.895 2-2 2zM24 24h-16v-20h16v20z"></path>
+     </symbol> 
+    </svg> 
+   </div> 
+   <link rel="stylesheet" href="/app_themes/ucsd/css/bootstrap-responsive-tabs.css"> 
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+   <header role="banner"> 
+    <div id="#header_nav" class="header site-header"> 
+     <div class="navbar-fixed-top body-bg header-stauts"> 
+      <div class="header-inner"> 
+       <div class="container"> 
+        <div class="header-top row"> 
+         <div class="col-lg-6"> 
+          <a href="/home" class="brand"><img src="/app_themes/ucsd/images/UCSanDiegoExtensionLogoHorizWeb.svg" alt="UC San Diego Extension"></a> 
+          <!-- Mobile menu toggle button (hamburger/x icon) --> 
+          <div class="menu-toggle-wrap" aria-label="open menu"> 
+           <input id="main-menu-state" type="checkbox"> 
+           <label class="main-menu-btn" for="main-menu-state" aria-labelledby="open menu" tabindex="-1"> <span class="main-menu-btn-icon"></span> Toggle main menu visibility </label> 
+          </div> 
+         </div> 
+         <div class="col-lg-6"> 
+          <ul class="header-links"> 
+           <li> <a href="/community-and-research/collaborate-with-us" class="drop-triggerds">Collaborate</a> 
+            <ul> 
+             <li><a href="/community-and-research/collaborate-with-us/partner-with-us">Partner With Us</a></li> 
+             <li><a href="/community-and-research/collaborate-with-us/custom-training-programs">Custom Training</a></li> 
+             <li><a href="/community-and-research/collaborate-with-us/teach-for-us">Teach for Us</a></li> 
+            </ul> </li> 
+           <li> <a href="#" class="drop-triggerds">Sign In</a> 
+            <ul> 
+             <li><a href="https://myextension.ucsd.edu/" target="_blank">My Extension</a></li> 
+             <li><a href="https://ucsdextension.blackboard.com" target="_blank">Blackboard</a></li> 
+             <li><a href="https://instructorlink.ucsd.edu/" target="_blank">Instructor Link</a></li> 
+            </ul> </li> 
+           <li> <a href="https://extcart.ucsd.edu/index.cfm?vAction=view" class="cart-link">
+             <svg class="icon" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xlink:href="#icon-cart"></use>
+             </svg></a> </li> 
+           <li> <a href="#" class="drop-triggerds search-toggle">
+             <svg class="icon" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xlink:href="#icon-search"></use>
+             </svg></a> 
+            <ul class="search-toggle-wrap"> 
+             <li> 
+              <div class="search-control hinted-input"> 
+               <input id="searchTextHeader" placeholder="Search UCSD Extension" type="text"> 
+               <button class="slide-search-submit"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button> 
+              </div> </li> 
+            </ul> </li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+       <!-- Main Menu --> 
+       <nav id="main-nav" role="navigation"> 
+        <ul id="main-menu" class="sm sm-simple"> 
+         <li class="highlighted"><a href="/courses-and-programs">Courses &amp; Programs</a> 
+          <ul> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl01_hlLev1" href="/courses-and-programs/arts-and-humanities">Arts &amp; Humanities</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/art-history">Art History</a> </li> 
+             <li> <a href="/courses-and-programs/Childrens-Book-Writing-and-Illustration">Children's Book Writing &amp; Illustration</a> </li> 
+             <li> <a href="/courses-and-programs/fine-art">Fine Art</a> </li> 
+             <li> <a href="/courses-and-programs/humanities">Humanities</a> </li> 
+             <li> <a href="/courses-and-programs/illustration">Illustration</a> </li> 
+             <li> <a href="/courses-and-programs/performing-arts">Performing Arts</a> </li> 
+             <li> <a href="/courses-and-programs/photography">Photography</a> </li> 
+             <li> <a href="/courses-and-programs/studio-and-decorative-arts">Studio &amp; Decorative Arts</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl03_hlLev1" href="/courses-and-programs/business-and-leadership">Business &amp; Leadership</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/accounting-and-taxation">Accounting and Taxation</a> </li> 
+             <li> <a href="/courses-and-programs/facilities-management-courses">Facilities Engineering and Management</a> </li> 
+             <li> <a href="/courses-and-programs/finance-and-business-analysis">Finance and Business Analysis</a> </li> 
+             <li> <a href="/courses-and-programs/human-resources-courses">Human Resource Management</a> </li> 
+             <li> <a href="/courses-and-programs/leadership-development">Leadership Development</a> </li> 
+             <li> <a href="/courses-and-programs/marketing">Marketing</a> </li> 
+             <li> <a href="/courses-and-programs/organizational-management-courses">Organizational Management</a> </li> 
+             <li> <a href="/courses-and-programs/project-management-courses-san-diego">Project Management &amp; Process Improvement</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl05_hlLev1" href="/courses-and-programs/data-analysis-and-mathematics">Data Analysis &amp; Mathematics</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/applied-mathematics">Applied Mathematics</a> </li> 
+             <li> <a href="/courses-and-programs/bioinformatics-and-biostatistics">Bioinformatics and Biostatistics</a> </li> 
+             <li> <a href="/courses-and-programs/business-intelligence-courses">Business Intelligence</a> </li> 
+             <li> <a href="/courses-and-programs/data-science-courses">Data Science</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl07_hlLev1" href="/courses-and-programs/degree-credit">Degree Credit</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/college-credit">College Credit</a> </li> 
+             <li> <a href="/student-resources/Registration-Policies-and-Procedures/Concurrent-Enrollment">Concurrent (Open) Enrollment</a> </li> 
+             <li> <a href="/courses-and-programs/graduate-programs">Graduate Programs</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl09_hlLev1" href="/courses-and-programs/digital-arts">Digital Arts</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/cad">Computer-Aided Design (CAD) &amp; Building Information Modeling (BIM)</a> </li> 
+             <li> <a href="/courses-and-programs/graphic-and-web-design">Graphic &amp; Web Design</a> </li> 
+             <li> <a href="/courses-and-programs/photography">Photography</a> </li> 
+             <li> <a href="/courses-and-programs/ux-design">User Experience (UX) Design</a> </li> 
+             <li> <a href="/courses-and-programs/video-and-editing">Video &amp; Editing</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl11_hlLev1" href="/courses-and-programs/education-programs">Education</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/commission-approved-programs">Commission Approved Programs</a> </li> 
+             <li> <a href="/courses-and-programs/professional-development">Professional Development</a> </li> 
+             <li> <a href="/courses-and-programs/supporting-k-12-students">Supporting K-12 Students</a> </li> 
+             <li> <a href="/courses-and-programs/teaching-english-as-a-foreign-language-tefl">Teaching English as a Foreign Language (TEFL)</a> </li> 
+             <li> <a href="/courses-and-programs/teaching-strategies-for-adults">Teaching Strategies for Adults</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl13_hlLev1" href="/courses-and-programs/environment-and-sustainability">Environment &amp; Sustainability</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/environmental-management">Environmental Management</a> </li> 
+             <li> <a href="/courses-and-programs/sustainability">Sustainability</a> </li> 
+             <li> <a href="/courses-and-programs/urban-planning-courses">Urban Planning and Preservation</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl15_hlLev1" href="/courses-and-programs/healthcare-education">Healthcare</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/clinical-trials-and-regulatory-affairs">Clinical Trials &amp; Regulatory Affairs</a> </li> 
+             <li> <a href="/courses-and-programs/counseling-and-behavioral-sciences">Counseling &amp; Behavioral Sciences</a> </li> 
+             <li> <a href="/courses-and-programs/fundamentals-of-healthcare">Fundamentals of Healthcare</a> </li> 
+             <li> <a href="/courses-and-programs/healthcare-informatics">Healthcare Informatics</a> </li> 
+             <li> <a href="/courses-and-programs/lactation-and-perinatal-education">Lactation &amp; Perinatal Education</a> </li> 
+             <li> <a href="/courses-and-programs/medical-coding">Medical Coding</a> </li> 
+             <li> <a href="/courses-and-programs/medical-communication-courses">Medical Communication</a> </li> 
+             <li> <a href="/courses-and-programs/nursing-and-clinical-professionals">Nursing &amp; Clinical Professionals</a> </li> 
+             <li> <a href="/courses-and-programs/nutrition">Nutrition</a> </li> 
+             <li> <a href="/postbacpremed/home">Post Baccalaureate Programs</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl17_hlLev1" href="../Sites/International-Programs/Home">International Programs</a> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl19_hlLev1" href="/courses-and-programs/languages-and-english-learning">Languages and English Learning</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/english-as-a-second-language-esl">English as a Second Language (ESL)</a> </li> 
+             <li> <a href="/courses-and-programs/foreign-languages">Foreign Languages</a> </li> 
+             <li> <a href="/courses-and-programs/teaching-english-as-a-foreign-language-tefl">Teaching English as a Foreign Language (TEFL)</a> </li> 
+             <li> <a href="/courses-and-programs/translation-and-interpretation">Translation &amp; Interpretation</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl21_hlLev1" href="/courses-and-programs/law">Law</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/advanced-legal-education">Advanced Legal Education</a> </li> 
+             <li> <a href="/courses-and-programs/intellectual-property">Intellectual Property</a> </li> 
+             <li> <a href="/courses-and-programs/paralegal-studies">Paralegal Studies</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl23_hlLev1" href="http://osha.ucsd.edu/" target="_blank">Occupational Safety &amp; Health</a> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl25_hlLev1" href="http://olli.ucsd.edu/" target="_blank">Osher Lifelong Learning Institute</a> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl27_hlLev1" href="/courses-and-programs/pre-college">Pre-College</a> 
+            <ul> 
+             <li> <a target="_blank" href="http://academicconnections.ucsd.edu/">Academic Connections</a> </li> 
+             <li> <a href="/courses-and-programs/college-credit">College Credit</a> </li> 
+             <li> <a target="_blank" href="http://gels.ucsd.edu">Global Environmental Leadership and Sustainability</a> </li> 
+             <li> <a href="/courses-and-programs/Sally-Ride-Science">Sally Ride Science Junior Academy</a> </li> 
+             <li> <a href="/courses-and-programs/steam">STE[+a]M</a> </li> 
+             <li> <a href="/courses-and-programs/test-preparation">Test Preparation</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl29_hlLev1" href="/courses-and-programs/sciences">Sciences</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/biology-fundamentals">Biology Fundamentals</a> </li> 
+             <li> <a href="/courses-and-programs/brewing-courses">Brewing</a> </li> 
+             <li> <a href="/courses-and-programs/clinical-trials-and-regulatory-affairs">Clinical Trials &amp; Regulatory Affairs</a> </li> 
+             <li> <a href="/courses-and-programs/diagnostics-and-medical-technology">Diagnostics and Medical Technology</a> </li> 
+             <li> <a href="/courses-and-programs/industrial-biotechnology">Industrial Biotechnology</a> </li> 
+             <li> <a href="/courses-and-programs/pharmaceutical-operations">Pharmaceutical Operations</a> </li> 
+             <li> <a href="/courses-and-programs/therapeutic-discovery-and-development">Therapeutic Discovery and Development</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl31_hlLev1" href="/courses-and-programs/technology">Technology</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/communications-engineering">Communications Engineering</a> </li> 
+             <li> <a href="/courses-and-programs/data-storage-and-management">Data Storage and Management</a> </li> 
+             <li> <a href="/courses-and-programs/electrical-engineering">Electrical Engineering</a> </li> 
+             <li> <a href="/courses-and-programs/embedded-engineering">Embedded Engineering</a> </li> 
+             <li> <a href="/courses-and-programs/engineering-design">Engineering Design</a> </li> 
+             <li> <a href="/courses-and-programs/facilities-management-courses">Facilities Engineering and Management</a> </li> 
+             <li> <a href="/courses-and-programs/healthcare-informatics">Healthcare Informatics</a> </li> 
+             <li> <a href="/courses-and-programs/it-management-training">IT Operations and Management</a> </li> 
+             <li> <a href="/courses-and-programs/mobile-applications">Mobile Applications Programming &amp; Design</a> </li> 
+             <li> <a href="/courses-and-programs/pe-reviews">Professional Engineering Reviews &amp; Advanced Studies</a> </li> 
+             <li> <a href="/courses-and-programs/programming-and-scripting-languages">Programming and Scripting Languages</a> </li> 
+             <li> <a href="/Courses-and-Programs/System-Admistration-Networking-and-Security">System Administration, Networking and Security</a> </li> 
+             <li> <a href="/courses-and-programs/systems-engineering">Systems Engineering</a> </li> 
+             <li> <a href="/courses-and-programs/web-technologies-and-design">Web Technologies and Design</a> </li>
+            </ul> </li> 
+           <li> <a id="p_lt_ctl02_ucMainMenuCategories_userControlElem_rptCategories_ctl33_hlLev1" href="/courses-and-programs/writing">Writing</a> 
+            <ul> 
+             <li> <a href="/courses-and-programs/Childrens-Book-Writing-and-Illustration">Children's Book Writing &amp; Illustration</a> </li> 
+             <li> <a href="/courses-and-programs/copyediting">Copyediting</a> </li> 
+             <li> <a href="/courses-and-programs/creative-writing">Creative Writing</a> </li> 
+             <li> <a href="/courses-and-programs/technical-communication">Technical Communication</a> </li>
+            </ul> </li>
+          </ul> </li> 
+         <!--ul level 0 starts -->
+         <li class=""> <a href="/news-and-events">News &amp; Events</a>
+          <ul>
+           <li> <a href="/news-and-events/Event-Calendar">Event Calendar</a> </li>
+           <li> <a href="/news-and-events/extension-blog">Extension Blog</a> </li>
+           <li> <a href="/news-and-events/public-events-and-lectures">Public Events &amp; Lectures</a> 
+            <ul>
+             <li> <a href="/news-and-events/public-events-and-lectures/Helen-Edison-Lecture-Series">Helen Edison Lecture Series</a> </li>
+            </ul></li>
+           <li> <a href="/news-and-events/social-media-directory">Social Media Directory</a> </li>
+           <li> <a href="/news-and-events/media-room">Media Room</a> 
+            <ul>
+             <li> <a href="/news-and-events/media-room/in-the-news">In the News</a> </li>
+             <li> <a href="/news-and-events/media-room/Press-Releases">Press Releases</a> </li>
+            </ul></li>
+          </ul></li>
+         <li class=""> <a href="/community-and-research">Community &amp; Research</a>
+          <ul>
+           <li> <a href="/community-and-research/uctv-and-ucsd-tv">UCTV &amp; UCSD-TV</a> </li>
+           <li> <a href="/community-and-research/center-for-research">Center for Research</a> </li>
+           <li> <a href="/community-and-research/serving-the-community">Serving the Community</a> 
+            <ul>
+             <li> <a href="/community-and-research/serving-the-community/global-connect">Global CONNECT</a> </li>
+             <li> <a href="/community-and-research/serving-the-community/uc-professional-development-institute-ucpdi">UC Professional Development Institute (UCPDI)</a> </li>
+            </ul></li>
+           <li> <a href="/community-and-research/collaborate-with-us">Collaborate With Us</a> 
+            <ul>
+             <li> <a href="/community-and-research/collaborate-with-us/teach-for-us">Teach for Us</a> </li>
+             <li> <a href="/community-and-research/collaborate-with-us/custom-training-programs">Custom Training Programs</a> </li>
+             <li> <a href="/community-and-research/collaborate-with-us/partner-with-us">Partner With Us</a> </li>
+            </ul></li>
+          </ul></li>
+         <li class=""> <a href="/student-resources">Student Resources</a>
+          <ul>
+           <li> <a href="/student-resources/Academic-Information">Academic Information</a> </li>
+           <li> <a href="/student-resources/Additional-Services">Additional Services</a> </li>
+           <li> <a href="/student-resources/Career-Resources">Career Resources</a> 
+            <ul>
+             <li> <a href="/student-resources/Career-Resources/LAUNCH">LAUNCH</a> </li>
+            </ul></li>
+           <li> <a href="/student-resources/financial-resources">Financial Resources</a> 
+            <ul>
+             <li> <a href="/student-resources/financial-resources/veterans-education-benefits">​Veterans Education Benefits</a> </li>
+            </ul></li>
+           <li> <a href="/student-resources/Forms-Library">Forms Library</a> </li>
+           <li> <a href="/student-resources/International-Student-Services">International Student Services</a> </li>
+           <li> <a href="/student-resources/registration-policies-and-procedures">Registration Policies and Procedures</a> 
+            <ul>
+             <li> <a href="/student-resources/registration-policies-and-procedures/Concurrent-Enrollment">Concurrent Enrollment</a> </li>
+            </ul></li>
+           <li> <a href="/student-resources/Services-for-Students-with-Disabilities">Services for Students with Disabilities</a> </li>
+           <li> <a href="/student-resources/student-rights-and-responsibilities">Student Rights and Responsibilities</a> </li>
+           <li> <a href="/student-resources/transcripts">Transcripts</a> </li>
+           <li> <a href="/student-resources/Tuition-and-Fees">Tuition and Fees</a> </li>
+          </ul></li>
+         <li class=""> <a href="/about-extension">About Extension</a>
+          <ul>
+           <li> <a href="/about-extension/Contact-Us">Contact Us</a> </li>
+           <li> <a href="/about-extension/instructors">Instructors</a> </li>
+           <li> <a href="/about-extension/locations-maps-and-transportation">Locations, Maps &amp; Transportation</a> </li>
+           <li> <a href="/about-extension/san-diego">San Diego</a> </li>
+           <li> <a href="/about-extension/Extension-Calendar">Extension Calendar</a> </li>
+          </ul>
+          <!--ul level 0 ends --> </li>
+        </ul> 
+       </nav> 
+       <!--End Main menu --> 
+      </div> 
+     </div> 
+    </div> 
+   </header> 
+   <main role="main"> 
+    <div class="container "> 
+     <div class="row"> 
+      <div class="col-lg-6"></div> 
+      <div class="col-lg-6 int-link-wrap"> 
+       <a class="int-program-link" href="/Sites/International-Programs"> international programs <span class="glyphicon glyphicon-play" aria-hidden="true"></span><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a> 
+      </div> 
+     </div> 
+    </div> 
+    <section class="hero search slider"> 
+     <div class="slider  heightReg" data-slick="{&quot;slidesToShow&quot;:1, &quot;slidesToScroll&quot;:1, &quot;arrows&quot;: true, &quot;fade&quot;: true }"> 
+      <div id="p_lt_ctl03_uc_MainHero_userControlElem_heroWrapInline" class="slide-item" style="background-image:url(/UCSDExtension/media/UCSDExtensionsMedia/neighborhoods/programming-and-scripting-languages/hero-programming-and-scripting-languages-1.jpg);"> 
+       <div class="slide-text"> 
+        <h1 id="p_lt_ctl03_uc_MainHero_userControlElem_heroTitle" class="title">Distributed Programming Using WCF, REST and the Web API</h1> 
+        <p id="p_lt_ctl03_uc_MainHero_userControlElem_heroP"></p> 
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-12"> 
+       <section class="page-meta"> 
+        <div class="col-sm-6 nopadding"> 
+         <span style="font-size: 0.9375rem; color: #000;" id="brcrumbnav"> <a href="/">Home /&nbsp;</a> <a href="/courses-and-programs/" class="CMSBreadCrumbsLink">Courses And Programs</a> 
+          <!--#######
+changes
+UCSD-527 resolves breadcrumb issue 
+--> /&nbsp;Distributed Programming Using WCF, REST and the Web API </span> 
+        </div>
+        <div class="col-sm-6 nopadding"> 
+         <ul class="share-tools"> 
+          <div class="shareholder fright clearfix"> 
+           <ul class=""> 
+            <li><span>SHARE:</span></li> 
+            <li> <a href="javascript:void(0)"> 
+              <div data-network="twitter" class="st-custom-button"> 
+               <span class="visuallyhidden">Twitter</span>
+               <svg class="icon" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#icon-twitter"></use>
+               </svg>
+              </div></a> </li> 
+            <li> <a href="javascript:void(0)"> 
+              <div data-network="facebook" class="st-custom-button"> 
+               <span class="visuallyhidden">Facebook</span>
+               <svg class="icon" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#icon-facebook"></use>
+               </svg>
+              </div></a> </li> 
+            <li> <a href="javascript:void(0)"> 
+              <div data-network="googleplus" class="st-custom-button"> 
+               <span class="visuallyhidden">Google Plus</span>
+               <svg class="icon" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#icon-google"></use>
+               </svg>
+              </div></a></li> 
+            <li> <a href="javascript:void(0)"> 
+              <div data-network="linkedin" class="st-custom-button"> 
+               <span class="visuallyhidden">LinkedIn</span>
+               <svg class="icon" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#icon-linkedin"></use>
+               </svg>
+              </div></a></li> 
+            <li> <a href="javascript:void(0)"> 
+              <div data-network="email" class="st-custom-button"> 
+               <span class="visuallyhidden">Email a Friend</span>
+               <svg class="icon" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#icon-mail"></use>
+               </svg>
+              </div></a></li> 
+           </ul> 
+          </div>
+         </ul> 
+        </div> 
+        <script type="text/javascript" async>
+	function genericSocialShare(url){
+		window.open(url,'sharer','toolbar=0,status=0,width=648,height=395');
+		return true;
+	}
+	</script> 
+       </section> 
+      </div> 
+     </div> 
+    </div> 
+    <br> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="two-column-layout"> 
+       <div class="main"> 
+        <p>Distributed and service-based programming techniques are critical in an ever-connected world. Learn to leverage the .NET Framework to design and develop Internet-enabled applications that can communicate with all forms of devices from workstations and servers to tablets and phones. With WCF you can quickly create web services using the latest WS* specifications and SOAP. The Web API leverages HTTP to create robust RESTful services, popular for cross-platform compatibility.<br> &nbsp;<br> Topics Include: </p>
+        <ul> 
+         <li>Design, configure, deploy and consume WCF services and use them to create and consume Data services for the web</li> 
+         <li>Design, configure, deploy and consume RESTful applications using the Web API</li> 
+         <li>Advanced security techniques including &nbsp;OAuth and federated security</li> 
+         <li>Cloud deployment using WCF and the Web API with Azure</li> 
+        </ul> Practical Experience: 
+        <ul> 
+         <li>Gain a fundamental understanding of distributed programming architecture and n-tier deployment</li> 
+         <li>Learn how to create efficient server-side applications that provide universal functionality and data to modern programs and apps</li> 
+         <li>Develop client-side applications that can leverage servers using multiple protocols</li> 
+        </ul> Software: Students will use Visual Studio Community Edition&nbsp;2015 or later&nbsp;which is freely available on Microsoft's website: 
+        <a href="https://www.visualstudio.com/">https://www.visualstudio.com/</a>
+        <br> &nbsp; 
+        <ul> 
+         <li> <p><br> <br> <br> <em><span lang="EN" style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt; mso-ansi-language: EN;"><font color="#000000">For more information about this course, please contact </font><a href="mailto:infotech@ucsd.edu"><span style="font-style: normal;"><font color="#103259">infotech@ucsd.edu</font></span></a><font color="#000000"> or 858-534-9352.</font></span></em></p> </li> 
+        </ul> 
+        <p></p> 
+        <p><strong>Note:</strong>&nbsp;C#I required, C#II recommended.</p> 
+        <p><strong>Course Number:</strong>&nbsp;CSE-41196<br> <strong>Credit:</strong>&nbsp;3.00 unit(s)<br><strong>Related Certificate Programs:</strong>&nbsp;<a href="/Programs/C-Programming">C# Programming</a> </p>
+        <p><a class="accordionToggle" action="expand" href="">+ Expand All</a></p> 
+        <dl class="accordion course-sections"> 
+         <dt> 
+          <a id="accordion133053" href="#accordion133053" aria-expanded="false" aria-controls="accordion133053" class="accordion-title is-collapsed js-accordionTrigger"> 
+           <div class="row"> 
+            <div class="col-md-3 col-xs-6" style="padding-left:10px; padding-right:10px;">
+             7/11/2018 - 8/29/2018
+            </div> 
+            <div class="col-md-1 col-xs-3" style="padding-left:10px; padding-right:10px;">
+             $725
+            </div> 
+            <div class="col-md-4 col-xs-3" style="padding-left:10px; padding-right:10px;">
+             Online
+            </div> 
+            <div class="col-md-4 col-xs-12" style="padding-left:10px; padding-right:10px;">
+             <span class="accordion-addCart"><button href="http://extcart.ucsd.edu/index.cfm?vAction=AddOneSection&amp;sectionID=133053" class="btn alternate">Add To Cart</button></span>
+            </div> 
+           </div> </a> 
+         </dt> 
+         <dd class="accordion-content accordion-item is-collapsed animateOut" id="accordion133053" aria-hidden="true"> 
+          <div class="inner"> 
+           <ul class="item-list"> 
+            <li class="item"> 
+             <div class="item-content"> 
+              <div class="media">
+               SECTION ID:
+              </div> 
+              <div class="content">
+               <p>133053</p>
+              </div> 
+             </div> </li> 
+            <li class="item"> 
+             <div class="item-content"> 
+              <div class="media">
+               CLASS TYPE:
+              </div> 
+              <div class="content">
+               <p>Online, Web-based instruction</p>
+              </div> 
+             </div> </li> 
+            <li class="item">
+             <div class="item-content">
+              <div class="media">
+               INSTRUCTOR:
+               <br>
+               <img src="/getattachment/Instructors/R-Z/Schurter,-Bruce-E/Schurter,-Bruce-E-(1).jpg.aspx?lang=en-US&amp;width=200&amp;height=200&amp;ext=.jpg" alt="98x98" style="width: 98px;">
+              </div> 
+              <div class="content">
+               <p><a href="/about-extension/bruce-e-schurter">Schurter, Bruce E.,</a> Software Engineer, Intrusion, Inc.</p>
+               <p>Bruce Schurter is a software engineer specializing in Microsoft technologies, including: .NET, C#, ASP.NET and SQL Server.&nbsp;Additionally, Schurter is a web technology expert, using REST/Web API, HTML 5, CSS 3, JavaScript, jQuery and PHP.&nbsp;&nbsp;He earned his bachelor's&nbsp;degree in computer science from UNLV and has obtained MCSD certification from Microsoft. Schurter&nbsp;is the founder of Infinite Root Software Inc. and currently works for Intrusion Inc., a leading provider of network security and compliance solutions. Schurter&nbsp;has also authored the "Learning C# - A Practical Approach" series of text books.</p> 
+              </div>
+             </div></li> 
+            <li class="item"> 
+             <div class="item-content"> 
+              <div class="media">
+               TEXTBOOKS:
+              </div> 
+              <div class="content"> 
+               <strong class="gray smallest">REQUIRED</strong>
+               <p>Pro WCF 4: Practical Microsoft SOA Implementation 2nd<br>by Pathak, Nishith<br>ISBN / ASIN: 9781430233688</p>
+               <p>Pro ASP.NET Web API: HTTP Web Services in ASP.NET 1st<br>by Ugurlu, Tugberk<br>ISBN / ASIN: 9781430247258</p> 
+               <p>You may purchase textbooks via the <a href="http://ucsdbkst.ucsd.edu/wrtx/UNEXSearch?term=SU18&amp;searchtype=section&amp;searchfor=133053" target="_blank">UC San Diego Bookstore</a>.</p> 
+              </div> 
+             </div> </li> 
+            <li class="item" style=""> 
+             <div class="item-content"> 
+              <div class="media">
+               POLICIES:
+              </div> 
+              <div class="content">
+               <p>No refunds after: 7/17/2018.<br></p>
+              </div> 
+             </div> </li> 
+            <li class="item" style="display:none;"> 
+             <div class="item-content"> 
+              <div class="media">
+               NOTE:
+              </div> 
+              <div class="content">
+               <p></p>
+              </div> 
+             </div> </li> 
+            <li class="item">
+             <div class="item-content">
+              <div class="media">
+               <p>DATE &amp; LOCATION:</p>
+              </div>
+              <div class="content">
+               <p>7/11/2018 - 8/29/2018<br><a href="http://ucsdextension.blackboard.com" target="_blank">ucsdextension.blackboard.com</a><br>You will have access to your course on the published start date.</p>
+              </div>
+             </div></li>
+           </ul> 
+          </div> 
+         </dd> 
+        </dl>
+        <div id="blankSection" style="display:none;"> 
+         <p>There are no sections of this course currently scheduled. Please contact the Science &amp; Technology department at 858-534-3229 or unex-sciencetech@ucsd.edu for information about when this course will be offered again.</p> 
+        </div> 
+       </div> 
+       <div class="aside"> 
+        <div class="signup"> 
+         <h4 class="color-secondary">Stay in Touch</h4> 
+         <p>Hear about upcoming events and courses</p>
+         <div id="p_lt_ctl05_pageplaceholder_p_lt_ctl03_DynamicNewletter_pnlSubscription" class="Subscription" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'p_lt_ctl05_pageplaceholder_p_lt_ctl03_DynamicNewletter_btnSubmit')"> 
+          <div class="NewsletterSubscription"> 
+           <div class="form-group"> 
+            <div class="editing-form-value-cell"> 
+             <input name="p$lt$ctl05$pageplaceholder$p$lt$ctl03$DynamicNewletter$txtEmail" type="text" maxlength="100" id="p_lt_ctl05_pageplaceholder_p_lt_ctl03_DynamicNewletter_txtEmail" class="form-control" placeholder="Email"> 
+            </div> 
+           </div> 
+           <div class="form-group form-group-submit"> 
+            <input type="submit" name="p$lt$ctl05$pageplaceholder$p$lt$ctl03$DynamicNewletter$btnSubmit" value="Subscribe" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;p$lt$ctl05$pageplaceholder$p$lt$ctl03$DynamicNewletter$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="p_lt_ctl05_pageplaceholder_p_lt_ctl03_DynamicNewletter_btnSubmit" class="SubscriptionButton btn btn-primary"> 
+           </div> 
+          </div> 
+         </div> 
+        </div>
+        <h3>Popular in Programming and Scripting Languages </h3>
+        <ul class="list-unstyled">
+         <li style="margin-bottom:.5em"><a href="/courses-and-programs/java-programming-ii-core-java-programming">Java Programming II: Core Java Programming&nbsp;<span style="text-transform:capitalize">course</span></a></li> 
+         <li style="margin-bottom:.5em"><a href="/courses-and-programs/python-programming-fundamentals">Python Programming Fundamentals&nbsp;<span style="text-transform:capitalize">course</span></a></li> 
+         <li style="margin-bottom:.5em"><a href="/courses-and-programs/introduction-to-sql-programming">Introduction to SQL Programming&nbsp;<span style="text-transform:capitalize">course</span></a></li> 
+         <li style="margin-bottom:.5em"><a href="/courses-and-programs/introduction-to-programming">Introduction to Programming&nbsp;<span style="text-transform:capitalize">course</span></a></li> 
+         <li style="margin-bottom:.5em"><a href="/courses-and-programs/c-c-programming-ii-dynamic-memory-and-file-i-o-concepts">C/C++ Programming II : Dynamic Memory and File I/O Concepts&nbsp;<span style="text-transform:capitalize">course</span></a></li> 
+         <li style="margin-bottom:.5em"><a href="/courses-and-programs/java-programming-i-fundamental-java-concepts">Java Programming I: Fundamental Java Concepts&nbsp;<span style="text-transform:capitalize">course</span></a></li> 
+         <li style="margin-bottom:.5em"><a href="/courses-and-programs/r-programming">Introduction to R Programming&nbsp;<span style="text-transform:capitalize">course</span></a></li> 
+         <li style="margin-bottom:.5em"><a href="/courses-and-programs/introduction-to-programming-using-java">Introduction to Programming Using Java&nbsp;<span style="text-transform:capitalize">course</span></a></li> 
+         <li style="margin-bottom:.5em"><a href="/courses-and-programs/c-c-programming-i-fundamental-programming-concepts">C/C++ Programming I : Fundamental Programming Concepts&nbsp;<span style="text-transform:capitalize">course</span></a></li>  
+        </ul>
+        <p>See All In <a href="/courses-and-programs/programming-and-scripting-languages">Programming and Scripting Languages</a> </p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <br>
+    <br> 
+   </main> 
+   <footer class="site-footer" role="contentinfo"> 
+    <div class="footer-top"> 
+     <div class="container"> 
+      <div class="footer-nav"> 
+       <ul class="menu"> 
+        <li class="footer-heading"><a href="/courses-and-programs">Courses &amp; Programs</a></li> 
+        <li><a href="/courses-and-programs/Degree-Credit">Degree Credit</a></li> 
+        <li><a href="/Sites/International-Programs/Home">International Programs</a></li> 
+        <li><a href="http://osha.ucsd.edu/">Occupational Safety and Health</a></li> 
+        <li><a href="http://olli.ucsd.edu/">Osher Lifelong Learning Inst.</a></li> 
+        <li><a href="/courses-and-programs/Pre-College">Pre-College</a></li> 
+       </ul> 
+       <ul class="menu"> 
+        <li class="footer-heading"> <a href="/news-and-events"> News &amp; Events </a> </li> 
+        <li> <a href="/news-and-events/Event-Calendar">Event Calendar</a> </li> 
+        <li> <a href="/news-and-events/extension-blog">Extension Blog</a> </li> 
+        <li> <a href="/news-and-events/media-room/in-the-news">In the News</a> </li> 
+        <li> <a href="/news-and-events/social-media-directory">Social Media Directory</a> </li> 
+        <li> <a href="/news-and-events/media-room">Media Room</a> </li> 
+       </ul>
+       <ul class="menu"> 
+        <li class="footer-heading"> <a href="/community-and-research"> Community &amp; Research </a> </li> 
+        <li> <a href="/community-and-research/uctv-and-ucsd-tv">UCTV &amp; UCSD-TV</a> </li> 
+        <li> <a href="/community-and-research/collaborate-with-us/teach-for-us">Teach for Us</a> </li> 
+        <li> <a href="/community-and-research/center-for-research">Center for Research</a> </li> 
+        <li> <a href="/community-and-research/collaborate-with-us">Collaborate With Us</a> </li> 
+       </ul>
+       <ul class="menu"> 
+        <li class="footer-heading"> <a href="/student-resources"> Student Resources </a> </li> 
+        <li> <a href="/student-resources/financial-resources/veterans-education-benefits">​Veterans Education Benefits</a> </li> 
+        <li> <a href="/student-resources/registration-policies-and-procedures">Registration Policies and Procedures</a> </li> 
+        <li> <a href="/student-resources/Services-for-Students-with-Disabilities">Services for Students with Disabilities</a> </li> 
+        <li> <a href="/student-resources/Tuition-and-Fees">Tuition and Fees</a> </li> 
+       </ul>
+       <ul class="menu"> 
+        <li class="footer-heading"> <a href="/about-extension"> About Extension </a> </li> 
+        <li> <a href="/about-extension/Contact-Us">Contact Us</a> </li> 
+        <li> <a href="/about-extension/instructors">Instructors</a> </li> 
+        <li> <a href="/about-extension/locations-maps-and-transportation">Locations, Maps &amp; Transportation</a> </li> 
+        <li> <a href="/about-extension/san-diego">San Diego</a> </li> 
+        <li> <a href="/about-extension/Extension-Calendar">Extension Calendar</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="footer-bottom"> 
+     <div class="container"> 
+      <div class="footer-column "> 
+       <a href="/home"><img src="/app_themes/ucsd/images/UCSanDiegoExtensionLogoHorizWebWhite.svg" alt="UC San Diego Extension"></a> 
+      </div>
+      <div class="footer-column col-terms"> 
+       <a href="/Privacy-Policy">Privacy Policy</a>
+       <br> 
+       <a href="/map">Site Map</a> 
+      </div>
+      <div class="footer-column col-stay"> 
+       <p>Sign up to hear about <br> upcoming events and courses</p> 
+       <style> .NewsletterSubscription > .input-group { width:90%;} 
+</style> 
+       <div id="p_lt_ctl07_NewsletterSubscription_pnlSubscription" class="Subscription" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'p_lt_ctl07_NewsletterSubscription_btnSubmit')"> 
+        <div class="NewsletterSubscription"> 
+         <div class="input-group"> 
+          <input name="p$lt$ctl07$NewsletterSubscription$txtEmail" type="text" maxlength="255" id="p_lt_ctl07_NewsletterSubscription_txtEmail" class="form-control" placeholder="Email Address"> 
+          <span class="input-group-btn btnNewsLetter"> <input type="submit" name="p$lt$ctl07$NewsletterSubscription$btnSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;p$lt$ctl07$NewsletterSubscription$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="p_lt_ctl07_NewsletterSubscription_btnSubmit" class="btn btn-default btnNewsLetter btn-primary"> </span> 
+         </div> 
+        </div> 
+       </div> 
+       <p></p> 
+      </div>
+      <div class="footer-column col-connect"> 
+       <p>Follow us today and<br> get inspired!</p> 
+       <div class="clearfix"> 
+        <ul class="social-links ul-footer-social-icon-fix"> 
+         <li><a href="https://www.facebook.com/UCSanDiegoExtension/" target="_blank"><span class="visuallyhidden" id="fbcount">Facebook</span> 
+           <svg class="icon facebook" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+            <use xlink:href="#icon-facebook"></use> 
+           </svg></a></li> 
+         <li><a href="https://twitter.com/UCSDextension" target="_blank"><span class="visuallyhidden">Twitter</span> 
+           <svg class="icon twitter" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+            <use xlink:href="#icon-twitter"></use> 
+           </svg></a></li> 
+         <li><a href="https://www.instagram.com/ucsandiegoextension/" target="_blank"><span class="visuallyhidden">Instagram</span> 
+           <svg class="icon twitter" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+            <use xlink:href="#icon-instagram"></use> 
+           </svg></a></li> 
+         <li><a href="https://www.linkedin.com/school/uc-san-diego-extension/" target="_blank"><span class="visuallyhidden">LinkedIn</span> 
+           <svg class="icon linkedin" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+            <use xlink:href="#icon-linkedin"></use> 
+           </svg></a></li> 
+         <li><a href="https://plus.google.com/+ucsdextension" target="_blank"><span class="visuallyhidden">Google Plus</span> 
+           <svg class="icon google" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+            <use xlink:href="#icon-google"></use> 
+           </svg></a></li> 
+         <li><a href="https://www.youtube.com/user/UCSanDiegoExtension" target="_blank"><span class="visuallyhidden">YouTube</span> 
+           <svg class="icon google" aria-hidden="true" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+            <use xlink:href="#icon-youtube"></use> 
+           </svg></a></li> 
+        </ul> 
+       </div> 
+      </div>
+      <script type="text/javascript">
+  $(document).ready(function(){
+    $("#searchTextHeader").parent('div').find('button').click(function (e) {
+      e.preventDefault();
+      var that = $(this);
+      var browseValue = '';
+      browseValue = that.parent('div').find('input[type=text]').val();
+      window.location.href = checkPage(browseValue);
+    });
+    $('#searchText').keypress(function (e) {
+      var key = e.which;
+      var that = $(this);
+      if (key == 13) {
+        e.preventDefault();
+        $('#searchButton').click();
+      }
+    });
+    
+    $('#searchButton').on('click', function (e) {
+      e.preventDefault();
+      var url = window.location.pathname.split("/");
+      var param = '';
+      var that = $(this);
+      var browseValue = '';
+      browseValue = that.parent('div').find('input[type=text]').val();
+      if (browseValue != '') {
+        if (typeof url != 'undefined' && url.pop() == 'instructors') {
+          param = '&instructors=1';
+        }
+        window.location.href = checkPage(browseValue);
+      }
+    });
+  });
+  
+  function checkPage(browseValue)
+  {
+    var url = '/site-search?searchtext=' + encodeURIComponent(browseValue);
+    switch ('CSE-41196')
+    {
+      case "Courses & Programs":
+        url += '&course=1&certificate=1&category=1';
+        break;
+      case "Extension Blog":
+        url += '&news=1';
+        break;
+      case "Student Resources":
+        url += '&student=1';
+        break;
+      case "Instructors":
+        url += '&instructor=1';
+        break;
+      default:
+        url += '&all=1';        
+    }
+    return url;
+  }
+  
+</script> 
+     </div> 
+    </div> 
+    <div class="subfooter"> 
+     <div class="container"> 
+      <div class="col-md-8">
+       <small>Copyright © 2018 Regents of the University of California. All Rights Reserved.</small>
+      </div> 
+      <div class="col-md-4"> 
+       <a href="#" class="back-to-top">Back to top</a> 
+      </div> 
+     </div> 
+    </div> 
+   </footer> 
+   <script src="/dist/js/frontEnd.js"></script> 
+   <!-- Sumo Pop-Over Code --> 
+   <script src="//load.sumome.com/" data-sumo-site-id="f4892352d49b64cea4db549fe396b9fa43ccd74620120c6abad10ccfde12801c" async></script> 
+   <script type="text/javascript">
+//<![CDATA[
+if (typeof(CaptchaCallback) === 'function') { CaptchaCallback(); }if (typeof(CaptchaCallback) === 'function') { CaptchaCallback(); }(function() {var fn = function() {$get("manScript_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script> 
+   <script type="text/javascript">
+	//<![CDATA[
+if (typeof(Sys.Browser.WebKit) == 'undefined') {
+    Sys.Browser.WebKit = {};
+}
+if (navigator.userAgent.indexOf('WebKit/') > -1) {
+    Sys.Browser.agent = Sys.Browser.WebKit;
+    Sys.Browser.version = parseFloat(navigator.userAgent.match(/WebKit\/(\d+(\.\d+)?)/)[1]);
+    Sys.Browser.name = 'WebKit';
+}
+//]]>
+</script> 
+   <script type="text/javascript">
+	//<![CDATA[
+WebServiceCall('/cmsapi/webanalytics', 'LogHit', '{"NodeAliasPath":"/Courses/CSE/CSE-41196","DocumentCultureCode":"en-us","UrlReferrer":""}')
+//]]>
+</script> 
+   <script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdbNpPG2hvqyD-1jAWw9rn5ClqG17RySkztkUYD5BPaodzL7ljI6HrM7XwwnifYISJA2&t=636475831203255666';
+WebForm_InitCallback();
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script> 
+  </form>   
+ </body>
+</html>

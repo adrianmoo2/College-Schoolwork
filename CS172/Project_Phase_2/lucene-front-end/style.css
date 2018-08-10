@@ -1,0 +1,74 @@
+.row{
+  margin-top: 32px;
+}
+
+.search{
+  font-size: 1.3em;
+}
+
+.search-bar{
+  position: relative;
+}
+
+.search-bar input{
+  width: 100%;
+  padding-left: 3px;
+  /*border-radius: 2px;  Design question */
+}
+
+.submit-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  cursor: default;
+  /*font-size: 18px;
+  top: 2px;    Design question */
+}
+
+
+.heading{
+  display: block;
+  text-align: center; 
+}
+
+.heading-icon{
+  display: inline-block;
+  border: 2px solid;
+  padding: 10px 5px 10px 5px;
+  font-size: 4em;
+  text-align: center;
+}
+
+/* Hurray for stack overflow */
+.no-gutter{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding: 3px;
+}
+
+ul{
+  visibility: hidden;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+a:hover{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+
+

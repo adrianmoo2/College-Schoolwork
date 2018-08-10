@@ -1,0 +1,1 @@
+To run the web searcher simply run RunWebsite.bat and begin searching through the search bar.

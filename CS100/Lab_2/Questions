@@ -1,0 +1,36 @@
+1Q) What are the values of src and dst before and after the delete command on line 32?
+
+1A) BEFORE: src = "hello"
+            dst = "hello"
+            
+    AFTER:  src = "hello"
+            dst does not exist
+
+2Q) Is there a null terminating character ('\0') at the end of dst after the copy is complete?
+
+2A) No
+
+3Q) How should you fix the code?
+
+3A) You could just not delete 'dstArr,' but that would probably cause problems later. Another solution would be to create another
+    char *tempVariable and copy the contents of the dst char array, then delete dstArr.
+    
+    
+    
+--------------------------------------------Part 2-----------------------------------
+
+Run the program on different filenames. Which if statements are hit?
+
+sb = {st_dev = 7340198, st_ino = 1330, st_nlink = 1, st_mode = 33261, st_uid = 1000, st_gid = 1000, __pad0 = 0, st_rdev = 0, st_size = 80076, 
+  st_blksize = 4096, st_blocks = 160, st_atim = {tv_sec = 1487038223, tv_nsec = 806859145}, st_mtim = {tv_sec = 1487038221, tv_nsec = 2859860}, 
+  st_ctim = {tv_sec = 1487038221, tv_nsec = 2859860}, __glibc_reserved = {0, 0, 0}}
+
+S_IRUSR - owner has read permissions
+
+S_IWUSR - owner has write permissions
+
+S_IXUSR - owner has execute permissions
+
+First if-statement not executed (Read)
+Second if-statement executed (Write)
+Third if-statement executed (Execute)

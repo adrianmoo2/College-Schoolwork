@@ -1,0 +1,338 @@
+
+ATRAN059_LAB3_PART4.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000222  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000001ae  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000001  00800100  00800100  00000222  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000222  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000254  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000038  00000000  00000000  00000294  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000932  00000000  00000000  000002cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000813  00000000  00000000  00000bfe  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000003a1  00000000  00000000  00001411  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000054  00000000  00000000  000017b4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000044e  00000000  00000000  00001808  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000005b  00000000  00000000  00001c56  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000028  00000000  00000000  00001cb1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	4c c0       	rjmp	.+152    	; 0x9a <__ctors_end>
+   2:	00 00       	nop
+   4:	5a c0       	rjmp	.+180    	; 0xba <__bad_interrupt>
+   6:	00 00       	nop
+   8:	58 c0       	rjmp	.+176    	; 0xba <__bad_interrupt>
+   a:	00 00       	nop
+   c:	56 c0       	rjmp	.+172    	; 0xba <__bad_interrupt>
+   e:	00 00       	nop
+  10:	54 c0       	rjmp	.+168    	; 0xba <__bad_interrupt>
+  12:	00 00       	nop
+  14:	52 c0       	rjmp	.+164    	; 0xba <__bad_interrupt>
+  16:	00 00       	nop
+  18:	50 c0       	rjmp	.+160    	; 0xba <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	4e c0       	rjmp	.+156    	; 0xba <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	4c c0       	rjmp	.+152    	; 0xba <__bad_interrupt>
+  22:	00 00       	nop
+  24:	4a c0       	rjmp	.+148    	; 0xba <__bad_interrupt>
+  26:	00 00       	nop
+  28:	48 c0       	rjmp	.+144    	; 0xba <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	46 c0       	rjmp	.+140    	; 0xba <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	44 c0       	rjmp	.+136    	; 0xba <__bad_interrupt>
+  32:	00 00       	nop
+  34:	42 c0       	rjmp	.+132    	; 0xba <__bad_interrupt>
+  36:	00 00       	nop
+  38:	40 c0       	rjmp	.+128    	; 0xba <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	3e c0       	rjmp	.+124    	; 0xba <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	3c c0       	rjmp	.+120    	; 0xba <__bad_interrupt>
+  42:	00 00       	nop
+  44:	3a c0       	rjmp	.+116    	; 0xba <__bad_interrupt>
+  46:	00 00       	nop
+  48:	38 c0       	rjmp	.+112    	; 0xba <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	36 c0       	rjmp	.+108    	; 0xba <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	34 c0       	rjmp	.+104    	; 0xba <__bad_interrupt>
+  52:	00 00       	nop
+  54:	32 c0       	rjmp	.+100    	; 0xba <__bad_interrupt>
+  56:	00 00       	nop
+  58:	30 c0       	rjmp	.+96     	; 0xba <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	2e c0       	rjmp	.+92     	; 0xba <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	2c c0       	rjmp	.+88     	; 0xba <__bad_interrupt>
+  62:	00 00       	nop
+  64:	2a c0       	rjmp	.+84     	; 0xba <__bad_interrupt>
+  66:	00 00       	nop
+  68:	28 c0       	rjmp	.+80     	; 0xba <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	26 c0       	rjmp	.+76     	; 0xba <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	24 c0       	rjmp	.+72     	; 0xba <__bad_interrupt>
+  72:	00 00       	nop
+  74:	22 c0       	rjmp	.+68     	; 0xba <__bad_interrupt>
+  76:	00 00       	nop
+  78:	20 c0       	rjmp	.+64     	; 0xba <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	1e c0       	rjmp	.+60     	; 0xba <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	1c c0       	rjmp	.+56     	; 0xba <__bad_interrupt>
+  82:	00 00       	nop
+  84:	1a c0       	rjmp	.+52     	; 0xba <__bad_interrupt>
+  86:	00 00       	nop
+  88:	18 c0       	rjmp	.+48     	; 0xba <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	69 00       	.word	0x0069	; ????
+  8e:	6d 00       	.word	0x006d	; ????
+  90:	71 00       	.word	0x0071	; ????
+  92:	8a 00       	.word	0x008a	; ????
+  94:	8e 00       	.word	0x008e	; ????
+  96:	92 00       	.word	0x0092	; ????
+  98:	96 00       	.word	0x0096	; ????
+
+0000009a <__ctors_end>:
+  9a:	11 24       	eor	r1, r1
+  9c:	1f be       	out	0x3f, r1	; 63
+  9e:	cf ef       	ldi	r28, 0xFF	; 255
+  a0:	d0 e4       	ldi	r29, 0x40	; 64
+  a2:	de bf       	out	0x3e, r29	; 62
+  a4:	cd bf       	out	0x3d, r28	; 61
+
+000000a6 <__do_clear_bss>:
+  a6:	21 e0       	ldi	r18, 0x01	; 1
+  a8:	a0 e0       	ldi	r26, 0x00	; 0
+  aa:	b1 e0       	ldi	r27, 0x01	; 1
+  ac:	01 c0       	rjmp	.+2      	; 0xb0 <.do_clear_bss_start>
+
+000000ae <.do_clear_bss_loop>:
+  ae:	1d 92       	st	X+, r1
+
+000000b0 <.do_clear_bss_start>:
+  b0:	a1 30       	cpi	r26, 0x01	; 1
+  b2:	b2 07       	cpc	r27, r18
+  b4:	e1 f7       	brne	.-8      	; 0xae <.do_clear_bss_loop>
+  b6:	65 d0       	rcall	.+202    	; 0x182 <main>
+  b8:	78 c0       	rjmp	.+240    	; 0x1aa <_exit>
+
+000000ba <__bad_interrupt>:
+  ba:	a2 cf       	rjmp	.-188    	; 0x0 <__vectors>
+
+000000bc <Tick>:
+	return ((x & (0x01 << k)) != 0);
+}
+
+void Tick()
+{
+	switch (state)
+  bc:	20 91 00 01 	lds	r18, 0x0100	; 0x800100 <_edata>
+  c0:	82 2f       	mov	r24, r18
+  c2:	90 e0       	ldi	r25, 0x00	; 0
+  c4:	87 30       	cpi	r24, 0x07	; 7
+  c6:	91 05       	cpc	r25, r1
+  c8:	a8 f5       	brcc	.+106    	; 0x134 <Tick+0x78>
+  ca:	fc 01       	movw	r30, r24
+  cc:	ea 5b       	subi	r30, 0xBA	; 186
+  ce:	ff 4f       	sbci	r31, 0xFF	; 255
+  d0:	63 c0       	rjmp	.+198    	; 0x198 <__tablejump2__>
+	{
+		case Start:
+			state = Init;
+  d2:	81 e0       	ldi	r24, 0x01	; 1
+  d4:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+  d8:	3c c0       	rjmp	.+120    	; 0x152 <Tick+0x96>
+			break;
+		case Init:
+			state = WhatPush;
+  da:	82 e0       	ldi	r24, 0x02	; 2
+  dc:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+			break;
+  e0:	08 95       	ret
+		case WhatPush:
+			state = PINA == 0x80 ? Locked : state;
+  e2:	80 b1       	in	r24, 0x00	; 0
+  e4:	80 38       	cpi	r24, 0x80	; 128
+  e6:	09 f4       	brne	.+2      	; 0xea <Tick+0x2e>
+  e8:	23 e0       	ldi	r18, 0x03	; 3
+  ea:	20 93 00 01 	sts	0x0100, r18	; 0x800100 <_edata>
+			state = PINA == 0x04 ? NumPressed : state;
+  ee:	80 b1       	in	r24, 0x00	; 0
+  f0:	84 30       	cpi	r24, 0x04	; 4
+  f2:	09 f4       	brne	.+2      	; 0xf6 <Tick+0x3a>
+  f4:	24 e0       	ldi	r18, 0x04	; 4
+  f6:	20 93 00 01 	sts	0x0100, r18	; 0x800100 <_edata>
+			state = PINA == 0x02 ? YPressed : state;
+  fa:	80 b1       	in	r24, 0x00	; 0
+  fc:	82 30       	cpi	r24, 0x02	; 2
+  fe:	09 f4       	brne	.+2      	; 0x102 <Tick+0x46>
+ 100:	25 e0       	ldi	r18, 0x05	; 5
+ 102:	20 93 00 01 	sts	0x0100, r18	; 0x800100 <_edata>
+			state = PINA == 0x01 ? XPressed : state;
+ 106:	80 b1       	in	r24, 0x00	; 0
+ 108:	81 30       	cpi	r24, 0x01	; 1
+ 10a:	09 f4       	brne	.+2      	; 0x10e <Tick+0x52>
+ 10c:	26 e0       	ldi	r18, 0x06	; 6
+ 10e:	20 93 00 01 	sts	0x0100, r18	; 0x800100 <_edata>
+			break;
+ 112:	10 c0       	rjmp	.+32     	; 0x134 <Tick+0x78>
+		case Locked:
+			state = WhatPush;
+ 114:	82 e0       	ldi	r24, 0x02	; 2
+ 116:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+			break;
+ 11a:	08 95       	ret
+		case NumPressed:
+			state = WhatPush;
+ 11c:	82 e0       	ldi	r24, 0x02	; 2
+ 11e:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+			break;
+ 122:	08 95       	ret
+		case YPressed:
+			state = WhatPush;
+ 124:	82 e0       	ldi	r24, 0x02	; 2
+ 126:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+			break;
+ 12a:	08 95       	ret
+		case XPressed:
+			state = WhatPush;
+ 12c:	82 e0       	ldi	r24, 0x02	; 2
+ 12e:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+			break;
+ 132:	08 95       	ret
+		default:
+			break;
+	}
+	switch (state)
+ 134:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <_edata>
+ 138:	84 30       	cpi	r24, 0x04	; 4
+ 13a:	91 f0       	breq	.+36     	; 0x160 <Tick+0xa4>
+ 13c:	28 f4       	brcc	.+10     	; 0x148 <Tick+0x8c>
+ 13e:	81 30       	cpi	r24, 0x01	; 1
+ 140:	41 f0       	breq	.+16     	; 0x152 <Tick+0x96>
+ 142:	83 30       	cpi	r24, 0x03	; 3
+ 144:	49 f0       	breq	.+18     	; 0x158 <Tick+0x9c>
+ 146:	08 95       	ret
+ 148:	85 30       	cpi	r24, 0x05	; 5
+ 14a:	69 f0       	breq	.+26     	; 0x166 <Tick+0xaa>
+ 14c:	86 30       	cpi	r24, 0x06	; 6
+ 14e:	b1 f0       	breq	.+44     	; 0x17c <Tick+0xc0>
+ 150:	08 95       	ret
+	{
+		case Start:
+			break;
+		case Init:
+		PORTB = 0x00;
+ 152:	15 b8       	out	0x05, r1	; 5
+			PORTC = 0x00;
+ 154:	18 b8       	out	0x08, r1	; 8
+			break;
+ 156:	08 95       	ret
+		case WhatPush:
+			break;
+		case Locked:
+			PORTC = 0x02;
+ 158:	82 e0       	ldi	r24, 0x02	; 2
+ 15a:	88 b9       	out	0x08, r24	; 8
+			PORTB = SetBit(PORTB, 0, 0);
+ 15c:	28 98       	cbi	0x05, 0	; 5
+			break;
+ 15e:	08 95       	ret
+		case NumPressed:
+		PORTC = 0x03;
+ 160:	83 e0       	ldi	r24, 0x03	; 3
+ 162:	88 b9       	out	0x08, r24	; 8
+			break;
+ 164:	08 95       	ret
+		case YPressed:
+			if (PORTC == 0x03)
+ 166:	88 b1       	in	r24, 0x08	; 8
+ 168:	83 30       	cpi	r24, 0x03	; 3
+ 16a:	29 f4       	brne	.+10     	; 0x176 <Tick+0xba>
+			{
+				if (GetBit(PORTB, 0))
+ 16c:	28 9b       	sbis	0x05, 0	; 5
+ 16e:	02 c0       	rjmp	.+4      	; 0x174 <Tick+0xb8>
+				{
+					PORTB = SetBit(PORTB, 0, 0);
+ 170:	28 98       	cbi	0x05, 0	; 5
+ 172:	01 c0       	rjmp	.+2      	; 0x176 <Tick+0xba>
+				}
+				else
+				{
+					PORTB = SetBit(PORTB, 0, 1);
+ 174:	28 9a       	sbi	0x05, 0	; 5
+				}
+			}
+			PORTC = 0x04;
+ 176:	84 e0       	ldi	r24, 0x04	; 4
+ 178:	88 b9       	out	0x08, r24	; 8
+			break;
+ 17a:	08 95       	ret
+		case XPressed:
+			PORTC = 0x05;
+ 17c:	85 e0       	ldi	r24, 0x05	; 5
+ 17e:	88 b9       	out	0x08, r24	; 8
+ 180:	08 95       	ret
+
+00000182 <main>:
+	}
+}
+
+int main(void)
+{
+	DDRA = 0x00; PORTA = 0xFF;
+ 182:	11 b8       	out	0x01, r1	; 1
+ 184:	8f ef       	ldi	r24, 0xFF	; 255
+ 186:	82 b9       	out	0x02, r24	; 2
+	DDRB = 0xFF; PORTB = 0x00;
+ 188:	84 b9       	out	0x04, r24	; 4
+ 18a:	15 b8       	out	0x05, r1	; 5
+	DDRC = 0xFF; PORTC = 0x00;
+ 18c:	87 b9       	out	0x07, r24	; 7
+ 18e:	18 b8       	out	0x08, r1	; 8
+	
+	state = Start;
+ 190:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <_edata>
+	
+    while(1)
+    {
+		Tick();
+ 194:	93 df       	rcall	.-218    	; 0xbc <Tick>
+ 196:	fe cf       	rjmp	.-4      	; 0x194 <main+0x12>
+
+00000198 <__tablejump2__>:
+ 198:	ee 0f       	add	r30, r30
+ 19a:	ff 1f       	adc	r31, r31
+ 19c:	00 24       	eor	r0, r0
+ 19e:	00 1c       	adc	r0, r0
+ 1a0:	0b be       	out	0x3b, r0	; 59
+ 1a2:	07 90       	elpm	r0, Z+
+ 1a4:	f6 91       	elpm	r31, Z
+ 1a6:	e0 2d       	mov	r30, r0
+ 1a8:	09 94       	ijmp
+
+000001aa <_exit>:
+ 1aa:	f8 94       	cli
+
+000001ac <__stop_program>:
+ 1ac:	ff cf       	rjmp	.-2      	; 0x1ac <__stop_program>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CS 172 Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/darkly/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+
+      <link rel="stylesheet" href="style.css">
+
+  
+</head>
+
+<body>
+
+  <body>
+  <div class="container-fluid">
+    
+    <!-- Logo Holder Header -->
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="text-warning heading">
+          <img src="https://pbs.twimg.com/profile_images/705524353375424512/HtBjMjRz_400x400.jpg"></img>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <!-- Finish Header -->
+    
+    <!-- Search bar and random button -->
+    <div class="row no-gutter">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-7 search">
+      
+        <div class="search-bar">
+          <input type="text" name="search" placeholder="Search" id="search"></input>
+        <button  class="submit-btn" onclick="getSearch();"><span class='fa fa-search text-primary'></span></button>
+        </div> 
+    </div>
+      
+    <div class="col-sm-1"></div>
+    </div>
+  <!-- End search bar -->
+  
+  
+  <!-- List of search results display -->
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10" id="article-container">
+      <ul class="list-group" id='list'>
+      </ul>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <!-- End List -->
+  
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
