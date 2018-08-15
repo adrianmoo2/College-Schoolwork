@@ -26,7 +26,7 @@ Probabilistic IR, IR evaluation methods, Web Search, Social Networks Search, and
 The program in this folder is the class's final project, and is divided into two phases.
 The first phase dealt with building a Web Crawler for .edu pages, and the second phase
 dealt with building an index and Web-based search interface. I worked with two others.
-We coded in the Eclipse IDE, and used C.
+We used the Eclipse IDE, and coded in Java.
 
 EE120B: Introduction to Embedded Systems. Topics covered included embedded processor
 programing, custom processor design, standard peripherals, memories, interfacing, and
