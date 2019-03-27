@@ -34,3 +34,5 @@ hardware / software tradeoffs. Interdisciplinary laboratory involved used of syn
 tools (i.e. soldering), programmable logic, microcontrollers, and development of
 working embedded systems. For this class, I worked with a breadboard using the Atmega1284
 microcontroller, as well as other circuitry parts. I used Atmel Studio, and coded in C.
+
+CS122A: Intermediate Embedded and Real-Time Systems. Topics covered included  hardware and software codesign, advanced programming paradigms (including state machines and concurrent processes), real-time programming and operating systems, basic control systems, and modern chip and design technologies. Laboratories involve use of microcontrollers, embedded microprocessors, programmable logic and advanced simulation, and debug environments. I used Atmel Studio, and coded in C.
