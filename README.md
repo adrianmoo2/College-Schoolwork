@@ -41,7 +41,7 @@ CS168: Introduction to VLSI Design. Topics covered included fabrication, transis
 transistor characteristics, design rules and stick diagrams, reliability and packaging, combinational logic functions and
 CMOS logic gates, properties of combinational gates, electrical properties of combinational gates, review of
 Synopsys Design Tools and Flow (Custom Designer, Design Compiler, IC Compiler, etc.), wire delay, buffer insertion,
-nMOS gates, DCVS logic, domino gates, layou, channel routing, simulation, combinational network delay, logic optimatization,
+nMOS gates, DCVS logic, domino gates, layou, channel routing, simulation, combinational network delay, logic optimization,
 transistor sizing, interconnect design, crosstalk, power optimization, logic efforts, switch networks, combinational testing, 
 hardware description languages, combinational circuit designs in Verilog, sequential machine designs in Verilog, global routing, 
 placement, and floorplanning. Laboratories involved use of Synopsys CAD tools (namely Custom Designer). We covered topics
