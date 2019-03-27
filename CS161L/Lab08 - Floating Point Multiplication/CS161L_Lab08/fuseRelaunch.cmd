@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ise/virtualshare/Lab06/CS161L_Lab08/SPFPMultiplier_tb_isim_beh.exe" -prj "/home/ise/virtualshare/Lab06/CS161L_Lab08/SPFPMultiplier_tb_beh.prj" "SPFPMultiplier_tb" "work.glbl" 

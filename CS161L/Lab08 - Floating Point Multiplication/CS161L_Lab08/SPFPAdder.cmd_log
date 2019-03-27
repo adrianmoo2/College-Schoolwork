@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/ise/virtualshare/Lab06/CS161L_Lab08/SPFPAdder.xst" -ofn "/home/ise/virtualshare/Lab06/CS161L_Lab08/SPFPAdder.syr" 
+xst -intstyle ise -ifn "/home/ise/virtualshare/Lab06/CS161L_Lab08/SPFPAdder.xst" -ofn "/home/ise/virtualshare/Lab06/CS161L_Lab08/SPFPAdder.syr" 

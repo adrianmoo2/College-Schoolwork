@@ -1,0 +1,28 @@
+Command line:
+   SPFPMultiplier_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  42789
+
+Wed Mar 13 06:07:33 2019
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 198.586 Meg
+
+ Total Signals          : 20
+ Total Nets             : 113
+ Total Signal Drivers   : 12
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 17
+ Total Traceable Variables  : 48
+ Total Scalar Nets and Variables : 658
+
+ Total Simulation Time: 0.04 sec
+
+ Current Memory Usage: 276.185 Meg
+
+Wed Mar 13 06:08:08 2019
+

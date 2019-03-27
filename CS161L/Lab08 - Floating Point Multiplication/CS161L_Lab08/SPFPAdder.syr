@@ -1,0 +1,610 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Reading design: SPFPAdder.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SPFPAdder.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SPFPAdder"
+Output Format                      : NGC
+Target Device                      : xc6slx45t-3-fgg484
+
+---- Source Options
+Top Module Name                    : SPFPAdder
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/virtualshare/Lab06/CS161L_Lab08/SPFPMult.v" into library work
+Parsing module <SPFPAdder>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <SPFPAdder>.
+WARNING:HDLCompiler:413 - "/home/ise/virtualshare/Lab06/CS161L_Lab08/SPFPMult.v" Line 72: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/virtualshare/Lab06/CS161L_Lab08/SPFPMult.v" Line 83: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/virtualshare/Lab06/CS161L_Lab08/SPFPMult.v" Line 86: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SPFPAdder>.
+    Related source file is "/home/ise/virtualshare/Lab06/CS161L_Lab08/SPFPMult.v".
+    Found 32-bit register for signal <result>.
+    Found 1-bit register for signal <valid>.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_2_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_6_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_10_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_14_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_18_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_22_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_26_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_30_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_34_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_38_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_42_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_46_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_50_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_54_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_58_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_62_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_66_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_70_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_74_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_78_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_82_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_86_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_90_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_94_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_98_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_102_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_106_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_110_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_114_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_118_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_122_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_126_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_130_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_134_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_138_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_142_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_146_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_150_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_154_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_158_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_162_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_166_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_170_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_174_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_178_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_182_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_186_OUT> created at line 72.
+    Found 8-bit adder for signal <Exp_Shift[7]_GND_1_o_add_190_OUT> created at line 72.
+    Found 9-bit adder for signal <n0942> created at line 83.
+    Found 8-bit adder for signal <GND_1_o_GND_1_o_add_196_OUT> created at line 86.
+    Found 8-bit subtractor for signal <n0943> created at line 0.
+    Found 24x24-bit multiplier for signal <PWR_1_o_PWR_1_o_MuLt_0_OUT> created at line 67.
+WARNING:Xst:737 - Found 1-bit latch for signal <Exp_Shift<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Exp_Shift<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Exp_Shift<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Exp_Shift<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Exp_Shift<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Exp_Shift<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Exp_Shift<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Exp_Shift<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred  51 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred 473 Multiplexer(s).
+Unit <SPFPAdder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 24x24-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 51
+ 8-bit adder                                           : 49
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 32-bit register                                       : 1
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Multiplexers                                         : 473
+ 1-bit 2-to-1 multiplexer                              : 376
+ 48-bit 2-to-1 multiplexer                             : 48
+ 8-bit 2-to-1 multiplexer                              : 49
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 24x24-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 51
+ 8-bit adder                                           : 50
+ 8-bit subtractor                                      : 1
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+# Multiplexers                                         : 480
+ 1-bit 2-to-1 multiplexer                              : 384
+ 48-bit 2-to-1 multiplexer                             : 48
+ 8-bit 2-to-1 multiplexer                              : 48
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <SPFPAdder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SPFPAdder, actual ratio is 11.
+Latch Exp_Shift_0 has been replicated 5 time(s)
+Latch Exp_Shift_1 has been replicated 5 time(s)
+Latch Exp_Shift_2 has been replicated 4 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SPFPAdder.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3184
+#      GND                         : 1
+#      LUT2                        : 80
+#      LUT3                        : 83
+#      LUT4                        : 152
+#      LUT5                        : 796
+#      LUT6                        : 1966
+#      MUXF7                       : 105
+#      VCC                         : 1
+# FlipFlops/Latches                : 55
+#      FDR                         : 33
+#      LD                          : 22
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 99
+#      IBUF                        : 66
+#      OBUF                        : 33
+# DSPs                             : 4
+#      DSP48A1                     : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45tfgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              22  out of  54576     0%  
+ Number of Slice LUTs:                 3077  out of  27288    11%  
+    Number used as Logic:              3077  out of  27288    11%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3093
+   Number with an unused Flip Flop:    3071  out of   3093    99%  
+   Number with an unused LUT:            16  out of   3093     0%  
+   Number of fully used LUT-FF pairs:     6  out of   3093     0%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                         100
+ Number of bonded IOBs:                 100  out of    296    33%  
+    IOB Flip Flops/Latches:              33
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                      4  out of     58     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------+------------------------+-------+
+Clock Signal                                         | Clock buffer(FF name)  | Load  |
+-----------------------------------------------------+------------------------+-------+
+clk                                                  | BUFGP                  | 33    |
+PWR_1_o_PWR_1_o_OR_101_o(PWR_1_o_PWR_1_o_OR_101_o3:O)| BUFG(*)(Exp_Shift_6)   | 22    |
+-----------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 25.387ns (Maximum Frequency: 39.390MHz)
+   Minimum input arrival time before clock: 77.765ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PWR_1_o_PWR_1_o_OR_101_o'
+  Clock period: 25.387ns (frequency: 39.390MHz)
+  Total number of paths / destination ports: 3360150027 / 22
+-------------------------------------------------------------------------
+Delay:               25.387ns (Levels of Logic = 23)
+  Source:            Exp_Shift_0_2 (LATCH)
+  Destination:       Exp_Shift_7 (LATCH)
+  Source Clock:      PWR_1_o_PWR_1_o_OR_101_o falling
+  Destination Clock: PWR_1_o_PWR_1_o_OR_101_o falling
+
+  Data Path: Exp_Shift_0_2 to Exp_Shift_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               9   0.498   0.830  Exp_Shift_0_2 (Exp_Shift_0_2)
+     LUT5:I4->O            9   0.205   0.830  Madd_Exp_Shift[7]_GND_1_o_add_14_OUT_cy<2>1111 (Madd_Exp_Shift[7]_GND_1_o_add_14_OUT_cy<2>111)
+     LUT6:I5->O            8   0.205   0.802  Madd_Exp_Shift[7]_GND_1_o_add_14_OUT_cy<2>11 (Madd_Exp_Shift[7]_GND_1_o_add_14_OUT_cy<2>)
+     MUXF7:S->O            3   0.148   0.651  Mmux_n085241_SW0 (N439)
+     LUT4:I3->O           19   0.205   1.072  Mmux_n085642 (Mmux_n085641)
+     LUT6:I5->O           16   0.205   1.005  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_296_o311 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_296_o31)
+     LUT6:I5->O           14   0.205   0.958  Mmux_n086443_1 (Mmux_n086443)
+     LUT6:I5->O           15   0.205   0.982  Madd_Exp_Shift[7]_GND_1_o_add_50_OUT_cy<6>111 (Madd_Exp_Shift[7]_GND_1_o_add_50_OUT_cy<6>11)
+     LUT6:I5->O            6   0.205   0.849  Mmux_n086651_SW5 (N870)
+     LUT6:I4->O            9   0.203   0.830  Mmux_n08705 (Madd_Exp_Shift[7]_GND_1_o_add_54_OUT_lut<4>)
+     LUT6:I5->O           17   0.205   1.028  Mmux_n087852 (Madd_Exp_Shift[7]_GND_1_o_add_70_OUT_lut<4>)
+     LUT6:I5->O           12   0.205   0.909  Mmux_n089252 (Madd_Exp_Shift[7]_GND_1_o_add_98_OUT_lut<4>)
+     LUT6:I5->O            7   0.205   0.774  Mmux_n089664_SW0 (N337)
+     LUT6:I5->O            3   0.205   0.879  Mmux_n089664_SW3 (N1202)
+     LUT6:I3->O            6   0.205   0.745  Mmux_n0906611 (Mmux_n090661)
+     LUT6:I5->O           19   0.205   1.072  Mmux_n09126 (Madd_Exp_Shift[7]_GND_1_o_add_138_OUT_lut<5>)
+     LUT6:I5->O            6   0.205   0.745  Madd_Exp_Shift[7]_GND_1_o_add_150_OUT_cy<5>11 (Madd_Exp_Shift[7]_GND_1_o_add_150_OUT_cy<5>)
+     LUT6:I5->O            4   0.205   0.788  Mmux_n092471_SW0 (N341)
+     LUT6:I4->O           13   0.203   1.161  Mmux_n092471 (Madd_Exp_Shift[7]_GND_1_o_add_162_OUT_lut<6>)
+     LUT6:I3->O           14   0.205   0.958  Mmux_n093071 (Madd_Exp_Shift[7]_GND_1_o_add_174_OUT_lut<6>)
+     LUT6:I5->O            5   0.205   0.714  Mmux_n09347 (Madd_Exp_Shift[7]_GND_1_o_add_182_OUT_lut<6>)
+     MUXF7:S->O            1   0.148   0.684  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631_SW2_SW1 (N1993)
+     LUT6:I4->O            3   0.203   0.995  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o163)
+     LUT6:I1->O            1   0.203   0.000  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1655 (Exp_Shift[7]_Exp_Shift[7]_MUX_104_o)
+     LD:D                      0.037          Exp_Shift_7
+    ----------------------------------------
+    Total                     25.387ns (5.128ns logic, 20.259ns route)
+                                       (20.2% logic, 79.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 28003617884983147888640 / 66
+-------------------------------------------------------------------------
+Offset:              77.765ns (Levels of Logic = 49)
+  Source:            A<16> (PAD)
+  Destination:       result_29 (FF)
+  Destination Clock: clk rising
+
+  Data Path: A<16> to result_29
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.616  A_16_IBUF (A_16_IBUF)
+     DSP48A1:A16->P47     18   4.560   1.049  Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT (Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT_P47_to_Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT1)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT1 (Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT1_PCOUT_to_Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT2_PCIN_47)
+     DSP48A1:PCIN47->P47   18   2.264   1.049  Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT2 (Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT2_P47_to_Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT3)
+     DSP48A1:C30->P11    142   2.687   2.235  Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT3 (PWR_1_o_PWR_1_o_MuLt_0_OUT<45>)
+     LUT4:I0->O           22   0.203   1.381  Mmux_n08547211 (Mmux_n0854721)
+     LUT5:I1->O          161   0.203   2.019  Mmux_PWR_1_o_PWR_1_o_mux_28_OUT481 (PWR_1_o_PWR_1_o_mux_28_OUT<47>)
+     LUT6:I5->O           30   0.205   1.264  Madd_Exp_Shift[7]_GND_1_o_add_38_OUT_cy<2>111 (Madd_Exp_Shift[7]_GND_1_o_add_38_OUT_cy<2>11)
+     LUT4:I3->O          105   0.205   2.235  Mmux_PWR_1_o_PWR_1_o_mux_44_OUT481 (PWR_1_o_PWR_1_o_mux_44_OUT<47>)
+     LUT5:I0->O          106   0.203   1.894  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o611 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o61)
+     LUT3:I2->O           21   0.205   1.458  Mmux_PWR_1_o_PWR_1_o_mux_60_OUT481 (PWR_1_o_PWR_1_o_mux_60_OUT<47>)
+     LUT6:I1->O            1   0.203   0.684  Mmux_PWR_1_o_PWR_1_o_mux_68_OUT154 (Mmux_PWR_1_o_PWR_1_o_mux_68_OUT153)
+     LUT4:I2->O            3   0.203   0.651  Mmux_PWR_1_o_PWR_1_o_mux_68_OUT156 (Mmux_PWR_1_o_PWR_1_o_mux_68_OUT155)
+     LUT5:I4->O          148   0.205   2.003  Mmux_PWR_1_o_PWR_1_o_mux_68_OUT157 (PWR_1_o_GND_1_o_equal_66_o_mmx_out21)
+     LUT3:I2->O           67   0.205   2.004  Mmux_PWR_1_o_PWR_1_o_mux_76_OUT481 (PWR_1_o_PWR_1_o_mux_76_OUT<47>)
+     LUT5:I0->O           27   0.203   1.468  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_344_o8431 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_344_o843)
+     LUT6:I2->O            1   0.203   0.808  Mmux_PWR_1_o_PWR_1_o_mux_80_OUT20_SW0 (N164)
+     LUT6:I3->O           52   0.205   1.905  Mmux_PWR_1_o_PWR_1_o_mux_80_OUT20 (PWR_1_o_GND_1_o_equal_78_o_mmx_out26)
+     LUT5:I0->O            1   0.203   0.684  Mmux_PWR_1_o_PWR_1_o_mux_92_OUT217 (Mmux_PWR_1_o_PWR_1_o_mux_92_OUT216)
+     LUT6:I4->O            1   0.203   0.808  Mmux_PWR_1_o_PWR_1_o_mux_92_OUT218 (Mmux_PWR_1_o_PWR_1_o_mux_92_OUT217)
+     LUT6:I3->O          154   0.205   2.012  Mmux_PWR_1_o_PWR_1_o_mux_92_OUT219 (PWR_1_o_GND_1_o_equal_90_o_mmx_out27)
+     LUT6:I5->O           88   0.205   1.903  Mmux_n089681_SW0 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_344_o102)
+     LUT6:I4->O          129   0.203   2.182  Mmux_PWR_1_o_PWR_1_o_mux_112_OUT431 (PWR_1_o_PWR_1_o_mux_112_OUT<47>)
+     LUT3:I0->O            3   0.205   0.995  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_296_o1091 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_296_o109)
+     LUT5:I0->O           24   0.203   1.420  Mmux_PWR_1_o_PWR_1_o_mux_128_OUT111 (Mmux_PWR_1_o_PWR_1_o_mux_128_OUT11)
+     LUT6:I2->O           11   0.203   0.987  Mmux_PWR_1_o_PWR_1_o_mux_128_OUT253 (PWR_1_o_GND_1_o_equal_126_o_mmx_out30)
+     LUT5:I3->O           42   0.203   1.434  Mmux_PWR_1_o_PWR_1_o_mux_136_OUT223 (PWR_1_o_GND_1_o_equal_134_o_mmx_out28)
+     LUT3:I2->O           91   0.205   2.162  Mmux_PWR_1_o_PWR_1_o_mux_172_OUT311 (Mmux_PWR_1_o_PWR_1_o_mux_172_OUT31)
+     LUT5:I0->O           54   0.203   1.938  Mmux_PWR_1_o_PWR_1_o_mux_148_OUT251 (PWR_1_o_GND_1_o_equal_146_o_mmx_out30)
+     LUT6:I0->O            5   0.203   0.715  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_344_o1621 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_344_o162)
+     LUT6:I5->O            2   0.205   0.721  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_392_o16311 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_392_o1631)
+     LUT6:I4->O            1   0.203   0.808  Mmux_n093031 (Mmux_n09303)
+     LUT6:I3->O           19   0.205   1.072  Mmux_n093033 (Madd_Exp_Shift[7]_GND_1_o_add_174_OUT_lut<2>)
+     LUT6:I5->O           10   0.205   0.857  Mmux_n0934411 (Mmux_n093441)
+     LUT5:I4->O            5   0.205   0.943  Mmux_n0936421 (Mmux_n093642)
+     LUT6:I3->O           12   0.205   0.909  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_248_o1621111 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_248_o162111)
+     LUT6:I5->O            1   0.205   0.684  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631_SW0_SW3 (N773)
+     LUT4:I2->O            1   0.203   0.808  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631_SW0_SW1 (N2012)
+     LUT6:I3->O            2   0.205   0.721  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631_SW0 (N521)
+     LUT6:I4->O            1   0.203   0.000  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631_SW2_SW1_G (N2177)
+     MUXF7:I1->O           1   0.140   0.684  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631_SW2_SW1 (N1993)
+     LUT6:I4->O            3   0.203   0.651  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o163)
+     LUT5:I4->O            1   0.205   0.000  Exp_Shift[7]_GND_1_o_equal_196_o<7>9_SW0_G (N2333)
+     MUXF7:I1->O           1   0.140   0.827  Exp_Shift[7]_GND_1_o_equal_196_o<7>9_SW0 (N2212)
+     LUT6:I2->O            1   0.203   0.808  Exp_Shift[7]_GND_1_o_equal_196_o<7>9 (Exp_Shift[7]_GND_1_o_equal_196_o<7>9)
+     LUT6:I3->O            5   0.205   1.079  Exp_Shift[7]_GND_1_o_equal_196_o<7>13 (Exp_Shift[7]_GND_1_o_equal_196_o)
+     LUT6:I0->O            3   0.203   1.015  Mmux_C_Exponent511 (Mmux_C_Exponent51)
+     LUT6:I0->O            2   0.203   0.845  Mmux_C_Exponent721 (Mmux_C_Exponent72)
+     LUT6:I3->O            1   0.205   0.000  Mmux_C_Exponent71 (C_Exponent<6>)
+     FDR:D                     0.102          result_29
+    ----------------------------------------
+    Total                     77.765ns (22.370ns logic, 55.395ns route)
+                                       (28.8% logic, 71.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PWR_1_o_PWR_1_o_OR_101_o'
+  Total number of paths / destination ports: 5525218279120695197696 / 22
+-------------------------------------------------------------------------
+Offset:              72.309ns (Levels of Logic = 43)
+  Source:            A<16> (PAD)
+  Destination:       Exp_Shift_7 (LATCH)
+  Destination Clock: PWR_1_o_PWR_1_o_OR_101_o falling
+
+  Data Path: A<16> to Exp_Shift_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.616  A_16_IBUF (A_16_IBUF)
+     DSP48A1:A16->P47     18   4.560   1.049  Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT (Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT_P47_to_Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT1)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT1 (Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT1_PCOUT_to_Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT2_PCIN_47)
+     DSP48A1:PCIN47->P47   18   2.264   1.049  Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT2 (Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT2_P47_to_Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT3)
+     DSP48A1:C30->P11    142   2.687   2.235  Mmult_PWR_1_o_PWR_1_o_MuLt_0_OUT3 (PWR_1_o_PWR_1_o_MuLt_0_OUT<45>)
+     LUT4:I0->O           22   0.203   1.381  Mmux_n08547211 (Mmux_n0854721)
+     LUT5:I1->O          161   0.203   2.019  Mmux_PWR_1_o_PWR_1_o_mux_28_OUT481 (PWR_1_o_PWR_1_o_mux_28_OUT<47>)
+     LUT6:I5->O           30   0.205   1.264  Madd_Exp_Shift[7]_GND_1_o_add_38_OUT_cy<2>111 (Madd_Exp_Shift[7]_GND_1_o_add_38_OUT_cy<2>11)
+     LUT4:I3->O          105   0.205   2.235  Mmux_PWR_1_o_PWR_1_o_mux_44_OUT481 (PWR_1_o_PWR_1_o_mux_44_OUT<47>)
+     LUT5:I0->O          106   0.203   1.894  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o611 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o61)
+     LUT3:I2->O           21   0.205   1.458  Mmux_PWR_1_o_PWR_1_o_mux_60_OUT481 (PWR_1_o_PWR_1_o_mux_60_OUT<47>)
+     LUT6:I1->O            1   0.203   0.684  Mmux_PWR_1_o_PWR_1_o_mux_68_OUT154 (Mmux_PWR_1_o_PWR_1_o_mux_68_OUT153)
+     LUT4:I2->O            3   0.203   0.651  Mmux_PWR_1_o_PWR_1_o_mux_68_OUT156 (Mmux_PWR_1_o_PWR_1_o_mux_68_OUT155)
+     LUT5:I4->O          148   0.205   2.003  Mmux_PWR_1_o_PWR_1_o_mux_68_OUT157 (PWR_1_o_GND_1_o_equal_66_o_mmx_out21)
+     LUT3:I2->O           67   0.205   2.004  Mmux_PWR_1_o_PWR_1_o_mux_76_OUT481 (PWR_1_o_PWR_1_o_mux_76_OUT<47>)
+     LUT5:I0->O           27   0.203   1.468  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_344_o8431 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_344_o843)
+     LUT6:I2->O            1   0.203   0.808  Mmux_PWR_1_o_PWR_1_o_mux_80_OUT20_SW0 (N164)
+     LUT6:I3->O           52   0.205   1.905  Mmux_PWR_1_o_PWR_1_o_mux_80_OUT20 (PWR_1_o_GND_1_o_equal_78_o_mmx_out26)
+     LUT5:I0->O            1   0.203   0.684  Mmux_PWR_1_o_PWR_1_o_mux_92_OUT217 (Mmux_PWR_1_o_PWR_1_o_mux_92_OUT216)
+     LUT6:I4->O            1   0.203   0.808  Mmux_PWR_1_o_PWR_1_o_mux_92_OUT218 (Mmux_PWR_1_o_PWR_1_o_mux_92_OUT217)
+     LUT6:I3->O          154   0.205   2.012  Mmux_PWR_1_o_PWR_1_o_mux_92_OUT219 (PWR_1_o_GND_1_o_equal_90_o_mmx_out27)
+     LUT6:I5->O           88   0.205   1.903  Mmux_n089681_SW0 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_344_o102)
+     LUT6:I4->O          129   0.203   2.182  Mmux_PWR_1_o_PWR_1_o_mux_112_OUT431 (PWR_1_o_PWR_1_o_mux_112_OUT<47>)
+     LUT3:I0->O            3   0.205   0.995  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_296_o1091 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_296_o109)
+     LUT5:I0->O           24   0.203   1.420  Mmux_PWR_1_o_PWR_1_o_mux_128_OUT111 (Mmux_PWR_1_o_PWR_1_o_mux_128_OUT11)
+     LUT6:I2->O           11   0.203   0.987  Mmux_PWR_1_o_PWR_1_o_mux_128_OUT253 (PWR_1_o_GND_1_o_equal_126_o_mmx_out30)
+     LUT5:I3->O           42   0.203   1.434  Mmux_PWR_1_o_PWR_1_o_mux_136_OUT223 (PWR_1_o_GND_1_o_equal_134_o_mmx_out28)
+     LUT3:I2->O           91   0.205   2.162  Mmux_PWR_1_o_PWR_1_o_mux_172_OUT311 (Mmux_PWR_1_o_PWR_1_o_mux_172_OUT31)
+     LUT5:I0->O           54   0.203   1.938  Mmux_PWR_1_o_PWR_1_o_mux_148_OUT251 (PWR_1_o_GND_1_o_equal_146_o_mmx_out30)
+     LUT6:I0->O            5   0.203   0.715  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_344_o1621 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_344_o162)
+     LUT6:I5->O            2   0.205   0.721  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_392_o16311 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_392_o1631)
+     LUT6:I4->O            1   0.203   0.808  Mmux_n093031 (Mmux_n09303)
+     LUT6:I3->O           19   0.205   1.072  Mmux_n093033 (Madd_Exp_Shift[7]_GND_1_o_add_174_OUT_lut<2>)
+     LUT6:I5->O           10   0.205   0.857  Mmux_n0934411 (Mmux_n093441)
+     LUT5:I4->O            5   0.205   0.943  Mmux_n0936421 (Mmux_n093642)
+     LUT6:I3->O           12   0.205   0.909  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_248_o1621111 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_248_o162111)
+     LUT6:I5->O            1   0.205   0.684  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631_SW0_SW3 (N773)
+     LUT4:I2->O            1   0.203   0.808  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631_SW0_SW1 (N2012)
+     LUT6:I3->O            2   0.205   0.721  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631_SW0 (N521)
+     LUT6:I4->O            1   0.203   0.000  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631_SW2_SW1_G (N2177)
+     MUXF7:I1->O           1   0.140   0.684  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631_SW2_SW1 (N1993)
+     LUT6:I4->O            3   0.203   0.995  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1631 (Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o163)
+     LUT6:I1->O            1   0.203   0.000  Mmux_Exp_Shift[7]_Exp_Shift[7]_MUX_104_o1655 (Exp_Shift[7]_Exp_Shift[7]_MUX_104_o)
+     LD:D                      0.037          Exp_Shift_7
+    ----------------------------------------
+    Total                     72.309ns (21.144ns logic, 51.165ns route)
+                                       (29.2% logic, 70.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 33 / 33
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            result_31 (FF)
+  Destination:       result<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: result_31 to result<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  result_31 (result_31)
+     OBUF:I->O                 2.571          result_31_OBUF (result<31>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock PWR_1_o_PWR_1_o_OR_101_o
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+PWR_1_o_PWR_1_o_OR_101_o|         |         |   25.387|         |
+------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+PWR_1_o_PWR_1_o_OR_101_o|         |   32.054|         |         |
+------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 86.00 secs
+Total CPU time to Xst completion: 83.36 secs
+ 
+--> 
+
+
+Total memory usage is 427752 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
