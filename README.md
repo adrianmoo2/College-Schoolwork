@@ -47,7 +47,7 @@ hardware description languages, combinational circuit designs in Verilog, sequen
 placement, and floorplanning. Laboratories involved use of Synopsys CAD tools (namely Custom Designer). We covered topics
 like schematic design, layout design, Design Rule Check (DRC) / Verification (LVS), parasitic extraction using HSPICE, and
 RTL Synthesis Design. Target designs included an inverter, 1 bit and 4 bit full adders, a ring oscillator, and Euclid's
-Algorithm for GCD.
+Algorithm for GCD. Mostly included GUI programming, but there were some parts coded in Verilog.
 
-CS161L: Laboratory in Design and Architecture of Computer Systems. Topics covered included the design and simulation of a complete computer system using hardware description language and simulator, instruction set architecture design; assemblers; datapath and control unit design; arithmetic and logic unit; memory and input/output (I/O) systems; and integration of all parts into a working computer system. Target designs included Fixed / IEEE754 Floating Point manipulation, Single Cycle MIPS Datapath, Pipelined MIPS Datapath, and CAM cells. I used the Xilinx ISE, and coded in C
+CS161L: Laboratory in Design and Architecture of Computer Systems. Topics covered included the design and simulation of a complete computer system using hardware description language and simulator, instruction set architecture design; assemblers; datapath and control unit design; arithmetic and logic unit; memory and input/output (I/O) systems; and integration of all parts into a working computer system. Target designs included Fixed / IEEE754 Floating Point manipulation, Single Cycle MIPS Datapath, Pipelined MIPS Datapath, and CAM cells. I used the Xilinx ISE, and coded in Verilog.
 
