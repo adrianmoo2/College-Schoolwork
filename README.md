@@ -35,4 +35,16 @@ tools (i.e. soldering), programmable logic, microcontrollers, and development of
 working embedded systems. For this class, I worked with a breadboard using the Atmega1284
 microcontroller, as well as other circuitry parts. I used Atmel Studio, and coded in C.
 
-CS122A: Intermediate Embedded and Real-Time Systems. Topics covered included  hardware and software codesign, advanced programming paradigms (including state machines and concurrent processes), real-time programming and operating systems, basic control systems, and modern chip and design technologies. Laboratories involve use of microcontrollers, embedded microprocessors, programmable logic and advanced simulation, and debug environments. I used Atmel Studio, and coded in C.
+CS122A: Intermediate Embedded and Real-Time Systems. Topics covered included  hardware and software codesign, advanced programming paradigms (including state machines and concurrent processes), real-time programming and operating systems, basic control systems, and modern chip and design technologies. Laboratories involved use of microcontrollers, embedded microprocessors, programmable logic and advanced simulation, and debug environments. I used Atmel Studio, and coded in C.
+
+CS168: Introduction to VLSI Design. Topics covered included Fabrication, transistor structures, basic transistor behavior,
+transistor characteristics, design rules and stick diagrams, reliability and packaging, combinational logic functions and
+CMOS logic gates, properties of combinational gates, electrical properties of combinational gates, review of
+Synopsys Design Tools and Flow (Custom Designer, Design Compiler, IC Compiler, etc.), wire delay, buffer insertion,
+nMOS gates, DCVS logic, domino gates, layou, channel routing, simulation, combinational network delay, logic optimatization,
+transistor sizing, interconnect design, crosstalk, power optimization, logic efforts, switch networks, combinational testing, 
+hardware description languages, combinational circuit designs in Verilog, sequential machine designs in Verilog, global routing, 
+placement, and floorplanning. Laboratories involved use of Synopsys CAD tools (namely Custom Designer). We covered topics
+like schematic design, layout design, Design Rule Check (DRC) / Verification (LVS), parasitic extraction using HSPICE, and
+RTL Synthesis Design. Target designs included an inverter, 1 bit and 4 bit full adders, a ring oscillator, and Euclid's
+Algorithm for GCD.
